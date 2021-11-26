@@ -1,238 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Τιμοκατάλογος - Ταβέρνα - Τα βαρέλια</title>
-        <meta name="description" content="Δοκιμάστε την ποικιλία προϊόντων μας, διαθέσιμα όλες τις ώρες της ημέρας, προσωπικής διαλογής και προτίμησης. Δείτε τον κατάλογό μας. Αναλαμβάνουμε συνεστιάσεις και εκδηλώσεις (γάμους, βαπτίσεις, παιδικά πάρτι). Τα Βαρέλια, Αθήνα, Αττικής.">
-        <meta name="keywords" content="estiatorio,taverna,mezedopoleio,varelia,barrels,menu,timokatalogos,wine,tsipouro,ouzo,feta cheese">
-        <meta name="author" content="">
 
-        <!-- Google fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Τιμοκατάλογος - Ταβέρνα - Τα βαρέλια</title>
+    <meta name="description"
+        content="Δοκιμάστε την ποικιλία προϊόντων μας, διαθέσιμα όλες τις ώρες της ημέρας, προσωπικής διαλογής και προτίμησης. Δείτε τον κατάλογό μας. Αναλαμβάνουμε συνεστιάσεις και εκδηλώσεις (γάμους, βαπτίσεις, παιδικά πάρτι). Τα Βαρέλια, Αθήνα, Αττικής.">
+    <meta name="keywords"
+        content="estiatorio,taverna,mezedopoleio,varelia,barrels,menu,timokatalogos,wine,tsipouro,ouzo,feta cheese">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- font awesome -->
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
 
-        <!-- bootstrap -->
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
-        <!-- animate.css -->
-        <link rel="stylesheet" href="assets/animate/animate.css" />
-        <link rel="stylesheet" href="assets/animate/set.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 
-        <!-- gallery -->
-        <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/animate/animate.css" />
+    <link rel="stylesheet" href="assets/animate/set.css" />
 
-        <!-- favicon -->
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- gallery -->
+    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
 
-        <link rel="stylesheet" href="assets/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-        <style>
-            #myBtn {
-                display: none;
-                position: fixed;
-                bottom: 20px;
-                right: 30px;
-                z-index: 20;
+    <link rel="stylesheet" href="assets/style.css">
 
-                outline: none;
-                cursor: pointer;
-            }
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 0px;
+            z-index: 20;
 
-        </style>
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
 
-    </head>
+</head>
 
-    <body>
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.png"></button>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.png"></button>
 
-        <div class="topbar animated fadeInLeftBig"></div>
+    <div class="topbar animated fadeInLeftBig"></div>
 
-        <!-- Header Starts -->
-        <div class="navbar-wrapper">
-            <div class="container">
-                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <!-- Logo Starts -->
-                            <br />
-                            <a href="/"><img src="images/logo-varelia.png" alt="logo"></a>
-                            <!-- #Logo Ends -->
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <!-- Nav Starts -->
-                        <div class="navbar-collapse  collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="/">Αρχική</a></li>
-                                <li class="active"><a href="menu.html">Μενού</a></li>
-                                <li><a href="gallery.html">Ο χώρος μας</a><li>
-                                <li><a href="contact.html">Επικοινωνία</a></li>
-                            </ul>
-                        </div>
-                        <!-- #Nav Ends -->
+    <!-- Header Starts -->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- Logo Starts -->
+                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.png" alt="logo"></a>
+                        <!-- #Logo Ends -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
+                    <!-- Nav Starts -->
+                    <div class="navbar-collapse  collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/">Αρχική</a></li>
+                            <li class="active"><a href="menu.html">Μενού</a></li>
+                            <li><a href="gallery.html">Ο χώρος μας</a></li>
+                            <li><a href="contact.html">Επικοινωνία</a></li>
+                        </ul>
+                    </div>
+                    <!-- #Nav Ends -->
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="spacer"></div>
-        <div class="container spacer about">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <div class="wowload fadeInUp">
-                        <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;"><i>Σε εμάς θα βρείτε μία μεγάλη συλλογή μαγειρευτών φαγητών, στη σχάρα αλλά και στη λαδόκολλα, συνοδευμένα με εκλεκτούς μεζέδες κάθε αρεσκείας, δροσερές σαλάτες και συνοδευτικό ποτό, για τους μεγάλους αλλά και μικρούς φίλους μας.</i></p>
-                    </div>
+    <div id="home"></div>
+    <div id="menu" class="container spacer about">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <div class="wowload fadeInUp">
+                    <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;"><i>Σε εμάς θα
+                            βρείτε μία μεγάλη συλλογή μαγειρευτών φαγητών, στη σχάρα αλλά και στη λαδόκολλα, συνοδευμένα
+                            με εκλεκτούς μεζέδες κάθε αρεσκείας, δροσερές σαλάτες και συνοδευτικό ποτό, για τους
+                            μεγάλους αλλά και μικρούς φίλους μας.</i></p>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Ορεκτικά</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Άρτος ανά άτομο 0,70€<br>Πίτα ψητή
+                0,50€<br>Φέτα ΠΟΠ Λάρισας 3,00€<br>Γραβιέρα Αμφιλοχίας 4,00€<br>Τυροκαυτερή 3,00€<br>Τζατζίκι
+                3,00€<br>Σκορδαλιά 3,00€<br>Μελιτζανοσαλάτα καπνιστή 3,50€<br>Πατάτες φρέσκες τηγανιτές
+                3,00€<br>Κολοκυθάκια τηγανιτά 3,50€<br>Φάβα 5,00€<br>Πατατοσαλάτα 5,00€<br>Σαγανάκι 4,00€<br>Φέτα με
+                φύλλο κρούστας, σουσάμι & μέλι 5,00€<br>Τυροκροκέτες 4,80€<br>Πιπεριές καυτερές 4,00€<br>Φέτα ψητή (με
+                ντομάτα-πιπεριά) 4,00€<br>Κολοκυθοκεφτέδες 4,50€<br>Μανιτάρια πλευρώτους στη σχάρα 6,00€<br>Τηγανόψωμο
+                με φέτα 5,00€</p>
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Σαλάτες</i></h2>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Χωριάτικη
+                5,50€<br>(ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, φέτα, κάππαρη, ελιές)</p>
+            <p class="wowload fadeInLeft" style=" margin:10;font-size:16px; text-align:center;">Αγγουροντομάτα
+                4,00€<br>(ντομάτα, αγγούρι, κρεμμύδι, πιιπεριά)</p>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Ντάκος
+                5,00€<br>(ντομάτα, φέτα, κάππαρη, ρίγανη, παξιμάδι)</p>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Πράσινη
+                4,00€<br>(μαρούλι, αγγούρι, κρεμμυδάκι φρέσκο, άνηθος)</p>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Λάχανο-καρότο 4,00€</p>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Χόρτα εποχής 4,50€</p>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Ανάμεικτη
+                6,00€<br>(λάχανο άσπρο-κόκκινο, μαρούλι, καρότο, σταφίδα, ντοματίνια, βινεγκρέτ μουστάρδας)</p>
+            <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Βαρέλια
+                6,50€<br>(μαρούλι, λόλα, iceberg, ντοματίνια, καρύδι, παρμεζάνα, βινεγκρέτ μουστάρδας)</p>
+        </div>
+    </div>
+
+    <figure class="wowload fadeInUp">
+        <img class="separator" src="assets/images/Screenshot from 2017-08-13 18-51-18.jpg" width="100%"
+            style="border-bottom:1px solid black;" />
+    </figure>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <br />
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Της ώρας στα κάρβουνα</i>
+            </h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Χοιρινά φιλετάκια λαιμού
+                μερίδα/κιλό 8,00€/22,00€<br>Χοιρινή μπριζόλα 7,50€<br>Χοιρινή μπριζόλα καπνιστή 8,50€<br>Ψαρονέφρι
+                9,00€<br>Κοντοσούβλι σχάρας 8,50€<br>Μοσχαρίσια μπριζόλα 9,00€<br>Μοσχαρίσια γάλακτος 12,00€<br>Κεμπάπ
+                γιαουρτλού 8,50€<br>Συκώτι μοσχαρίσιο 8,00€<br>Μπιφτέκια 7,50€<br>Μπιφτέκια γεμιστά 8,00€<br>Κοτόπουλο
+                φιλέτο 7,50€<br>Κοτόπουλο παϊδάκια μερίδα/κιλό 7,00€/15,00€<br>Παϊδάκια αρνίσια μερίδα/κιλό 9,00€/28,00€
+            <p class="wowload fadeInLeft" style="margin:8; font-size:16px; text-align:center;">Ποικιλία κρεατικών 2
+                ατόμων 18,00€<br>(χοιρινό, κοτόπουλο, μπιφτέκι, λουκάνικο, πίτα, πατάτες)</p>
+            <p class="wowload fadeInLeft" style="margin:8; font-size:16px; text-align:center;">Ποικιλία κρεατικών 4
+                ατόμων 30,00€</p>
+
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Στη σούβλα</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Κοντοσούβλι κοτόπουλο μερίδα
+                7,50€<br>Κοντοσούβλι χοιρινό μερίδα 8,00€<br>Κοκορέτσι μερίδα 8,00€</p>
+        </div>
+    </div>
+
+    <figure class="wowload fadeInUp">
+        <img class="separator" src="assets/food/19866353_1956215701290293_399473925_n.jpg" width="100%"
+            style="border-bottom:1px solid black;" />
+    </figure>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <br />
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Μεζέδες</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Τηγανιά χοιρινή 7,00€<br>Κοτόπουλο
+                τηγανιά με μουστάρδα 7,00€<br>Χωριάτικο λουκάνικο 7,00€<br>Κεφτεδάκια με σως γιαουρτιού 7,00€</p>
+
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Θαλασσινά</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Βακαλάος τηγανιτός
+                8,00€<br>Καλαμαράκια τηγανιτά 8,00€<br>Γαύρος μαρινάτος 4,00€<br>Σαρδέλα ψητή 7,00€<br>Χταπόδι ξιδάτο
+                10,00€<br>Γαύρος τηγανιτός 6,00€</p>
+        </div>
+    </div>
+
+    <figure class="wowload fadeInUp">
+        <img class="separator" src="assets/images/Screenshot from 2017-08-13 19-25-20.jpg" width="100%"
+            style="border-bottom:1px solid black;" />
+    </figure>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <br />
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Οίνος</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Λευκός ξηρός
+                3,00€/500ml<br>Ροζέ ξηρός 3,00€/500ml<br>Ερυθρός ξηρός 3,50€/500ml<br>Ερυθρός ημίγλυκος 3,50€/500ml</p>
+
+            <br /><br />
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Τσίπουρο - Ούζο</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Τσίπουρο Τυρνάβου
+                Δεκαράκι/200ml 7,00€<br>Τσίπουρο Γάτσιου/200ml 7,00€<br>Τσίπουρο Αποστολάκη/200ml 8,00€<br>Ούζο (Μίνι
+                Μυτιλήνης/Πλωμαρίου)/200ml 7,00€</p>
+
+            <br /><br />
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Μπύρες</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Άλφα 3,00€<br>Heineken
+                3,00€<br>Μάμος 3,00€<br>Fix/Fix άνευ 3,00€<br>Amstel 3,00€<br>Kaiser 3,20€</p>
+
+            <br /><br />
+            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Αναψυκτικά</i></h2>
+            <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Coca-Cola
+                (απλή/light/zero) 1,50€<br>Sprite 1,50€<br>Σόδα 1,50€<br>Πορτοκαλάδα 1,50€<br>Νερό(1.5lt) 1,00€</p>
+        </div>
+    </div>
+
+    <!-- Footer Starts -->
+    <div class="footer text-center spacer">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Ορεκτικά</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Άρτος ανά άτομο 0,70€<br>Πίτα ψητή 0,50€<br>Φέτα ΠΟΠ Λάρισας 3,00€<br>Γραβιέρα Αμφιλοχίας 4,00€<br>Τυροκαυτερή 3,00€<br>Τζατζίκι 3,00€<br>Σκορδαλιά 3,00€<br>Μελιτζανοσαλάτα καπνιστή 3,50€<br>Πατάτες φρέσκες τηγανιτές 3,00€<br>Κολοκυθάκια τηγανιτά 3,50€<br>Φάβα 5,00€<br>Πατατοσαλάτα 5,00€<br>Σαγανάκι 4,00€<br>Φέτα με φύλλο κρούστας, σουσάμι & μέλι 5,00€<br>Τυροκροκέτες 4,80€<br>Πιπεριές καυτερές 4,00€<br>Φέτα ψητή (με ντομάτα-πιπεριά) 4,00€<br>Κολοκυθοκεφτέδες 4,50€<br>Μανιτάρια πλευρώτους στη σχάρα 6,00€<br>Τηγανόψωμο με φέτα 5,00€</p>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Σαλάτες</i></h2>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Χωριάτικη 5,50€<br>(ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, φέτα, κάππαρη, ελιές)</p>
-                <p class="wowload fadeInLeft" style=" margin:10;font-size:16px; text-align:center;">Αγγουροντομάτα 4,00€<br>(ντομάτα, αγγούρι, κρεμμύδι, πιιπεριά)</p>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Ντάκος 5,00€<br>(ντομάτα, φέτα, κάππαρη, ρίγανη, παξιμάδι)</p>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Πράσινη 4,00€<br>(μαρούλι, αγγούρι, κρεμμυδάκι φρέσκο, άνηθος)</p>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Λάχανο-καρότο 4,00€</p>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Χόρτα εποχής 4,50€</p>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Ανάμεικτη 6,00€<br>(λάχανο άσπρο-κόκκινο, μαρούλι, καρότο, σταφίδα, ντοματίνια, βινεγκρέτ μουστάρδας)</p>
-                <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Βαρέλια 6,50€<br>(μαρούλι, λόλα, iceberg, ντοματίνια, καρύδι, παρμεζάνα, βινεγκρέτ μουστάρδας)</p>
-            </div>
+            <p class="wowload flipInX">
+                <a href="https://www.facebook.com/tavareliamezedopoleion" target="_blank">
+                    <iframe
+                        src="https://www.facebook.com/plugins/likebox.php?locale=el_GR&href=https%3A%2F%2Fwww.facebook.com%2Ftavareliamezedopoleion&amp;width&amp;height=290&amp;colorscheme=dark&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true"
+                        scrolling="no" frameborder="0" style="border:none; overflow:hidden;"
+                        allowTransparency="true"></iframe><i class="fa fa-facebook fa-2x"></i></a>
+            </p>
+            <p class="wowload fadeInLeft" style="font-size:16px;">Τηλ. 210 805 0344</p>
         </div>
+        @Τα Βαρέλια - Ταβέρνα - Μεζεδοπωλείο.
+    </div>
 
-        <figure class="wowload fadeInUp">
-            <img class="separator" src="assets/images/Screenshot from 2017-08-13 18-51-18.jpg" width="100%" style="border-bottom:1px solid black;"/>
-        </figure>
+    <!-- # Footer Ends -->
 
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <br/>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Της ώρας στα κάρβουνα</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Χοιρινά φιλετάκια λαιμού μερίδα/κιλό 8,00€/22,00€<br>Χοιρινή μπριζόλα 7,50€<br>Χοιρινή μπριζόλα καπνιστή 8,50€<br>Ψαρονέφρι 9,00€<br>Κοντοσούβλι σχάρας 8,50€<br>Μοσχαρίσια μπριζόλα 9,00€<br>Μοσχαρίσια γάλακτος 12,00€<br>Κεμπάπ γιαουρτλού 8,50€<br>Συκώτι μοσχαρίσιο 8,00€<br>Μπιφτέκια 7,50€<br>Μπιφτέκια γεμιστά 8,00€<br>Κοτόπουλο φιλέτο 7,50€<br>Κοτόπουλο παϊδάκια μερίδα/κιλό 7,00€/15,00€<br>Παϊδάκια αρνίσια μερίδα/κιλό 9,00€/28,00€
-                <p class="wowload fadeInLeft" style="margin:8; font-size:16px; text-align:center;">Ποικιλία κρεατικών 2 ατόμων 18,00€<br>(χοιρινό, κοτόπουλο, μπιφτέκι, λουκάνικο, πίτα, πατάτες)</p>
-                <p class="wowload fadeInLeft" style="margin:8; font-size:16px; text-align:center;">Ποικιλία κρεατικών 4 ατόμων 30,00€</p>
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title">Title</h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    </div>
 
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Στη σούβλα</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Κοντοσούβλι κοτόπουλο μερίδα 7,50€<br>Κοντοσούβλι χοιρινό μερίδα 8,00€<br>Κοκορέτσι μερίδα 8,00€</p>
-            </div>
-        </div>
-        
-        <figure class="wowload fadeInUp">
-            <img class="separator" src="assets/food/19866353_1956215701290293_399473925_n.jpg" width="100%" style="border-bottom:1px solid black;"/>
-        </figure>
-        
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <br/>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Μεζέδες</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Τηγανιά χοιρινή 7,00€<br>Κοτόπουλο τηγανιά με μουστάρδα 7,00€<br>Χωριάτικο λουκάνικο 7,00€<br>Κεφτεδάκια με σως γιαουρτιού 7,00€</p>
-                
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Θαλασσινά</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Βακαλάος τηγανιτός 8,00€<br>Καλαμαράκια τηγανιτά 8,00€<br>Γαύρος μαρινάτος 4,00€<br>Σαρδέλα ψητή 7,00€<br>Χταπόδι ξιδάτο 10,00€<br>Γαύρος τηγανιτός 6,00€</p>
-            </div>
-        </div>
+    <!-- jquery -->
+    <script src="assets/jquery.js"></script>
 
-        <figure class="wowload fadeInUp">
-            <img class="separator" src="assets/images/Screenshot from 2017-08-13 19-25-20.jpg" width="100%" style="border-bottom:1px solid black;"/>
-        </figure>
+    <!-- wow script -->
+    <script src="assets/wow/wow.min.js"></script>
 
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <br/>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Οίνος</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Λευκός ξηρός 3,00€/500ml<br>Ροζέ ξηρός 3,00€/500ml<br>Ερυθρός ξηρός 3,50€/500ml<br>Ερυθρός ημίγλυκος 3,50€/500ml</p>
-                
-                <br/><br/>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Τσίπουρο - Ούζο</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Τσίπουρο Τυρνάβου Δεκαράκι/200ml 7,00€<br>Τσίπουρο Γάτσιου/200ml 7,00€<br>Τσίπουρο Αποστολάκη/200ml 8,00€<br>Ούζο (Μίνι Μυτιλήνης/Πλωμαρίου)/200ml 7,00€</p>
+    <!-- boostrap -->
+    <script src="assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
 
-                <br/><br/>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Μπύρες</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Άλφα 3,00€<br>Heineken 3,00€<br>Μάμος 3,00€<br>Fix/Fix άνευ 3,00€<br>Amstel 3,00€<br>Kaiser 3,20€</p>
+    <!-- jquery mobile -->
+    <script src="assets/mobile/touchSwipe.min.js"></script>
+    <script src="assets/respond/respond.js"></script>
 
-                <br/><br/>
-                <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Αναψυκτικά</i></h2>
-                <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Coca-Cola (απλή/light/zero) 1,50€<br>Sprite 1,50€<br>Σόδα 1,50€<br>Πορτοκαλάδα 1,50€<br>Νερό(1.5lt) 1,00€</p>
-            </div>
-        </div>
+    <!-- gallery -->
+    <script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
 
-        <!-- Footer Starts -->
-        <div class="footer text-center spacer">
-            <div class="row">
-                <p class="wowload flipInX">
-                    <a href="https://www.facebook.com/tavareliamezedopoleion" target="_blank">
-                        <iframe src="https://www.facebook.com/plugins/likebox.php?locale=el_GR&href=https%3A%2F%2Fwww.facebook.com%2Ftavareliamezedopoleion&amp;width&amp;height=290&amp;colorscheme=dark&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe><i class="fa fa-facebook fa-2x"></i></a></p>
-                <p class="wowload fadeInLeft" style="font-size:16px;">Τηλ. 210 805 0344</p>
-            </div>
-            @Τα Βαρέλια - Ταβέρνα - Μεζεδοπωλείο.
-        </div>
+    <!-- script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script -->
 
-        <!-- # Footer Ends -->
+    <!-- custom script -->
+    <script src="assets/script.js"></script>
 
-        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-            <!-- The container for the modal slides -->
-            <div class="slides"></div>
-            <!-- Controls for the borderless lightbox -->
-            <h3 class="title">Title</h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <!-- The modal dialog, which will be used to wrap the lightbox content -->
-        </div>
+    <!-- go to top script -->
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
 
-        <!-- jquery -->
-        <script src="assets/jquery.js"></script>
-
-        <!-- wow script -->
-        <script src="assets/wow/wow.min.js"></script>
-
-        <!-- boostrap -->
-        <script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
-
-        <!-- jquery mobile -->
-        <script src="assets/mobile/touchSwipe.min.js"></script>
-        <script src="assets/respond/respond.js"></script>
-
-        <!-- gallery -->
-        <script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
-
-        <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
-
-        <!-- custom script -->
-        <script src="assets/script.js"></script>
-
-        <!-- go to top script -->
-        <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
             }
+        }
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
-    </body>
+</body>
+
 </html>

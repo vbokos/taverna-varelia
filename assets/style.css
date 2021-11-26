@@ -1,6 +1,4 @@
-body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica; right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
-
-
+body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica; overflow-x: hidden; right: no-repeat; position: relative; background-color: rgb(247, 241, 235); -webkit-font-smoothing:antialiased;}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
@@ -27,7 +25,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .btn:hover,.btn:active{color: #fff;}
 .btn-default{color: #ccc;border: 1px solid #aaa;}
 .btn-default:hover,.btn-default:active{background: rgba(0,0,0,0.8);}
-.btn-primary{color: #fff;background:#666;width: 100%;outline: none;}
+.btn-primary{color: #fff;background:#666;outline: none;}
 .btn-primary:hover,.btn-primary:active,.btn-primary:focus{background:#333;box-shadow: none;}
 
 .topbar {background:url(../images/lines.png);	height:5px;position: fixed;top: 0;width: 100%;z-index: 1000;}
