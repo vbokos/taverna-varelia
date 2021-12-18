@@ -11,7 +11,7 @@
       "@context" : "http://schema.org",
       "@type" : "Restaurant",
       "name" : "Τα Βαρέλια",
-      "image" : "https://www.taverna-varelia.gr/images/logo-varelia.png",
+      "image" : "https://www.taverna-varelia.gr/images/logo-varelia.webp",
       "menu" : "https://www.taverna-varelia.gr/menu.html",
       "url" : "https://www.taverna-varelia.gr/",
       "aggregateRating": {
@@ -31,32 +31,882 @@
     <!-- Google verification -->
     <meta name="google-site-verification" content="0u-8L8vf04r3T9GVCGFXqEN8dzXihas9rmF0dCL7FIM" />
 
-    <!-- Google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        .fa-2x {
+            font-size: 2em
+        }
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        .fa-3x {
+            font-size: 3em
+        }
 
-    <!-- animate.css -->
-    <link rel="stylesheet" href="assets/animate/animate.css" />
-    <link rel="stylesheet" href="assets/animate/set.css" />
+        .fa-5x {
+            font-size: 5em
+        }
 
-    <!-- gallery -->
-    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+        .fa-facebook-f:before,
+        .fa-facebook:before {
+            content: "\f09a"
+        }
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        .fa-cutlery:before {
+            content: "\f0f5"
+        }
 
-    <link rel="stylesheet" href="assets/style.css">
+        .fa-angle-down:before {
+            content: "\f107"
+        }
 
-    <style>
+        html {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section,
+        summary {
+            display: block
+        }
+
+        a {
+            background: 0 0
+        }
+
+        a:active,
+        a:hover {
+            outline: 0
+        }
+
+        h1 {
+            margin: .67em 0;
+            font-size: 2em
+        }
+
+        img {
+            border: 0
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            font: inherit;
+            color: inherit
+        }
+
+        button {
+            overflow: visible
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        html input[type=button],
+        input[type=reset],
+        input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        td,
+        th {
+            padding: 0
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        :before,
+        :after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff
+        }
+
+        input,
+        button,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        a {
+            color: #428bca;
+            text-decoration: none
+        }
+
+        a:hover,
+        a:focus {
+            color: #2a6496;
+            text-decoration: underline
+        }
+
+        a:focus {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px
+        }
+
+        figure {
+            margin: 0
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        .img-responsive,
+        .thumbnail>img,
+        .thumbnail a>img,
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            display: block;
+            width: 100% \9;
+            max-width: 100%;
+            height: auto
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit
+        }
+
+        h1,
+        .h1 {
+            font-size: 36px
+        }
+
+        h2,
+        .h2 {
+            font-size: 30px
+        }
+
+        h3,
+        .h3 {
+            font-size: 24px
+        }
+
+        p {
+            margin: 0 0 10px
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        ul,
+        ol {
+            margin-top: 0;
+            margin-bottom: 10px
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        @media (min-width:768px) {
+            .container {
+                width: 750px
+            }
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .col-xs-1,
+        .col-sm-1,
+        .col-md-1,
+        .col-lg-1,
+        .col-xs-2,
+        .col-sm-2,
+        .col-md-2,
+        .col-lg-2,
+        .col-xs-3,
+        .col-sm-3,
+        .col-md-3,
+        .col-lg-3,
+        .col-xs-4,
+        .col-sm-4,
+        .col-md-4,
+        .col-lg-4,
+        .col-xs-5,
+        .col-sm-5,
+        .col-md-5,
+        .col-lg-5,
+        .col-xs-6,
+        .col-sm-6,
+        .col-md-6,
+        .col-lg-6,
+        .col-xs-7,
+        .col-sm-7,
+        .col-md-7,
+        .col-lg-7,
+        .col-xs-8,
+        .col-sm-8,
+        .col-md-8,
+        .col-lg-8,
+        .col-xs-9,
+        .col-sm-9,
+        .col-md-9,
+        .col-lg-9,
+        .col-xs-10,
+        .col-sm-10,
+        .col-md-10,
+        .col-lg-10,
+        .col-xs-11,
+        .col-sm-11,
+        .col-md-11,
+        .col-lg-11,
+        .col-xs-12,
+        .col-sm-12,
+        .col-md-12,
+        .col-lg-12 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        @media (min-width:768px) {
+
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12 {
+                float: left
+            }
+
+            .col-sm-8 {
+                width: 66.66666667%
+            }
+
+            .col-sm-6 {
+                width: 50%
+            }
+
+            .col-sm-offset-3 {
+                margin-left: 25%
+            }
+
+            .col-sm-offset-2 {
+                margin-left: 16.66666667%
+            }
+        }
+
+        table {
+            background-color: transparent
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #428bca;
+            border-color: #357ebd
+        }
+
+        .btn-lg,
+        .btn-group-lg>.btn {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px
+        }
+
+        .collapse {
+            display: none
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .nav>li {
+            position: relative;
+            display: block
+        }
+
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 10px 15px
+        }
+
+        .nav>li>a:hover,
+        .nav>li>a:focus {
+            text-decoration: none;
+            background-color: #eee
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 50px;
+            margin-bottom: 20px;
+            border: 1px solid transparent
+        }
+
+        @media (min-width:768px) {
+            .navbar {
+                border-radius: 4px
+            }
+        }
+
+        @media (min-width:768px) {
+            .navbar-header {
+                float: left
+            }
+        }
+
+        .navbar-collapse {
+            padding-right: 15px;
+            padding-left: 15px;
+            overflow-x: visible;
+            -webkit-overflow-scrolling: touch;
+            border-top: 1px solid transparent;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1)
+        }
+
+        @media (min-width:768px) {
+            .navbar-collapse {
+                width: auto;
+                border-top: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none
+            }
+
+            .navbar-collapse.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0;
+                overflow: visible !important
+            }
+
+            .navbar-collapse.in {
+                overflow-y: visible
+            }
+
+            .navbar-fixed-top .navbar-collapse,
+            .navbar-static-top .navbar-collapse,
+            .navbar-fixed-bottom .navbar-collapse {
+                padding-right: 0;
+                padding-left: 0
+            }
+        }
+
+        .navbar-fixed-top .navbar-collapse,
+        .navbar-fixed-bottom .navbar-collapse {
+            max-height: 340px
+        }
+
+        .container>.navbar-header,
+        .container-fluid>.navbar-header,
+        .container>.navbar-collapse,
+        .container-fluid>.navbar-collapse {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        @media (min-width:768px) {
+
+            .container>.navbar-header,
+            .container-fluid>.navbar-header,
+            .container>.navbar-collapse,
+            .container-fluid>.navbar-collapse {
+                margin-right: 0;
+                margin-left: 0
+            }
+        }
+
+        .navbar-fixed-top,
+        .navbar-fixed-bottom {
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            -webkit-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
+
+        @media (min-width:768px) {
+
+            .navbar-fixed-top,
+            .navbar-fixed-bottom {
+                border-radius: 0
+            }
+        }
+
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 1px
+        }
+
+        .navbar-brand {
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px
+        }
+
+        @media (min-width:768px) {
+
+            .navbar>.container .navbar-brand,
+            .navbar>.container-fluid .navbar-brand {
+                margin-left: -15px
+            }
+        }
+
+        .navbar-toggle {
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px
+        }
+
+        @media (min-width:768px) {
+            .navbar-toggle {
+                display: none
+            }
+        }
+
+        .navbar-nav {
+            margin: 7.5px -15px
+        }
+
+        @media (min-width:768px) {
+            .navbar-nav {
+                float: left;
+                margin: 0
+            }
+
+            .navbar-nav>li {
+                float: left
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 15px;
+                padding-bottom: 15px
+            }
+
+            .navbar-nav.navbar-right:last-child {
+                margin-right: -15px
+            }
+        }
+
+        @media (min-width:768px) {
+            .navbar-left {
+                float: left !important
+            }
+
+            .navbar-right {
+                float: right !important
+            }
+        }
+
+        .navbar-inverse {
+            background-color: #222;
+            border-color: #080808
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>li>a:hover,
+        .navbar-inverse .navbar-nav>li>a:focus {
+            color: #fff;
+            background-color: transparent
+        }
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:hover,
+        .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff;
+            background-color: #080808
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: #333
+        }
+
+        .navbar-inverse .navbar-collapse,
+        .navbar-inverse .navbar-form {
+            border-color: #101010
+        }
+
+        .close {
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: .2
+        }
+
+        .clearfix:before,
+        .clearfix:after,
+        .dl-horizontal dd:before,
+        .dl-horizontal dd:after,
+        .container:before,
+        .container:after,
+        .container-fluid:before,
+        .container-fluid:after,
+        .row:before,
+        .row:after,
+        .form-horizontal .form-group:before,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:before,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:before,
+        .btn-group-vertical>.btn-group:after,
+        .nav:before,
+        .nav:after,
+        .navbar:before,
+        .navbar:after,
+        .navbar-header:before,
+        .navbar-header:after,
+        .navbar-collapse:before,
+        .navbar-collapse:after,
+        .pager:before,
+        .pager:after,
+        .panel-body:before,
+        .panel-body:after,
+        .modal-footer:before,
+        .modal-footer:after {
+            display: table;
+            content: " "
+        }
+
+        .clearfix:after,
+        .dl-horizontal dd:after,
+        .container:after,
+        .container-fluid:after,
+        .row:after,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:after,
+        .nav:after,
+        .navbar:after,
+        .navbar-header:after,
+        .navbar-collapse:after,
+        .pager:after,
+        .panel-body:after,
+        .modal-footer:after {
+            clear: both
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .bounceInDown {
+            -webkit-animation-name: bounceInDown;
+            animation-name: bounceInDown;
+        }
+
+        .bounceInUp {
+            -webkit-animation-name: bounceInUp;
+            animation-name: bounceInUp;
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        .fadeInLeftBig {
+            -webkit-animation-name: fadeInLeftBig;
+            animation-name: fadeInLeftBig;
+        }
+
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .flipInX {
+            -webkit-backface-visibility: visible !important;
+            -ms-backface-visibility: visible !important;
+            backface-visibility: visible !important;
+            -webkit-animation-name: flipInX;
+            animation-name: flipInX;
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -moz-backface-visibility: hidden
+        }
+
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            margin: auto;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            opacity: 1
+        }
+
+        .blueimp-gallery {
+            position: fixed;
+            z-index: 999999;
+            overflow: hidden;
+            background: #000;
+            background: rgba(0, 0, 0, .9);
+            opacity: 0;
+            display: none;
+            direction: ltr;
+            -ms-touch-action: none;
+            touch-action: none
+        }
+
+        .blueimp-gallery-display {
+            display: block;
+            opacity: 1
+        }
+
+        .blueimp-gallery>.slides {
+            position: relative;
+            height: 100%;
+            overflow: hidden
+        }
+
+        .blueimp-gallery>.slides>.slide {
+            position: relative;
+            float: left;
+            height: 100%;
+            text-align: center;
+            -webkit-transition-timing-function: cubic-bezier(0.645, .045, .355, 1);
+            -moz-transition-timing-function: cubic-bezier(0.645, .045, .355, 1);
+            -ms-transition-timing-function: cubic-bezier(0.645, .045, .355, 1);
+            -o-transition-timing-function: cubic-bezier(0.645, .045, .355, 1);
+            transition-timing-function: cubic-bezier(0.645, .045, .355, 1)
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            -webkit-transition: opacity .5s linear;
+            -moz-transition: opacity .5s linear;
+            -ms-transition: opacity .5s linear;
+            -o-transition: opacity .5s linear;
+            transition: opacity .5s linear
+        }
+
+        .blueimp-gallery>.slides>.slide-loading {
+            background: url(../img/loading.gif) center no-repeat;
+            background-size: 64px 64px
+        }
+
+        .blueimp-gallery>.slides>.slide-loading>.slide-content {
+            opacity: 0
+        }
+
+        .blueimp-gallery>.prev,
+        .blueimp-gallery>.next {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 40px;
+            height: 40px;
+            margin-top: -23px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 60px;
+            font-weight: 100;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 0 2px #000;
+            text-align: center;
+            background: #222;
+            background: rgba(0, 0, 0, .5);
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            border: 3px solid #fff;
+            -webkit-border-radius: 23px;
+            -moz-border-radius: 23px;
+            border-radius: 23px;
+            opacity: .5;
+            cursor: pointer;
+            display: none
+        }
+
+        .blueimp-gallery>.next {
+            left: auto;
+            right: 15px
+        }
+
+        .blueimp-gallery>.close,
+        .blueimp-gallery>.title {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            margin: 0 40px 0 0;
+            font-size: 20px;
+            line-height: 30px;
+            color: #fff;
+            text-shadow: 0 0 2px #000;
+            opacity: .8;
+            display: none
+        }
+
+        .blueimp-gallery>.close {
+            padding: 15px;
+            right: 15px;
+            left: auto;
+            margin: -15px;
+            font-size: 30px;
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        .blueimp-gallery-controls>.prev,
+        .blueimp-gallery-controls>.next,
+        .blueimp-gallery-controls>.close,
+        .blueimp-gallery-controls>.title,
+        .blueimp-gallery-controls>.play-pause {
+            display: block;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0)
+        }
+
+        .blueimp-gallery>.slides>.slide>.slide-content,
+        .blueimp-gallery>.prev,
+        .blueimp-gallery>.next,
+        .blueimp-gallery>.close,
+        .blueimp-gallery>.play-pause {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
         #myBtn {
             display: none;
             position: fixed;
@@ -69,10 +919,50 @@
         }
     </style>
 
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap">
+    </noscript>
+
+    <!-- font awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+
+    <!-- bootstrap -->
+    <link rel="preload" href="assets/bootstrap/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- animate.css -->
+    <link rel="preload" href="assets/animate/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/animate/animate.css">
+    </noscript>
+    <link rel="stylesheet" href="assets/animate/set.css" />
+
+    <!-- gallery -->
+    <link rel="preload" href="assets/gallery/blueimp-gallery.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+    </noscript>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.png"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.webp"></button>
     <div class="topbar animated fadeInLeftBig"></div>
     <!-- Header Starts -->
     <div class="navbar-wrapper">
@@ -81,7 +971,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <!-- Logo Starts -->
-                        <a class="navbar-brand" href="#home"><img src="images/logo-varelia.png" alt="logo"></a>
+                        <a class="navbar-brand" href="#home"><img src="images/logo-varelia.webp" alt="logo"></a>
                         <!-- #Logo Ends -->
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target=".navbar-collapse">
@@ -111,14 +1001,14 @@
     <div id="home">
         <!-- Slider Starts -->
         <div class="banner">
-            <img src="assets/images/backgroundFinal.jpg" alt="banner" class="img-responsive">
+            <img src="assets/images/backgroundFinal.webp" alt="banner" class="img-responsive">
             <div class="caption">
                 <div class="caption-wrapper">
                     <div class="caption-info">
                         <a href="#history" class="explore animated bounceInDown">
                             <i class="fa fa-cutlery fa-5x animated bounceInDown"></i>
                             <h1 class="animated bounceInUp"></h1>
-                            <i class="fa fa-angle-down  fa-3x"></i>
+                            <i class="fa fa-angle-down fa-3x"></i>
                         </a>
                     </div>
                 </div>
@@ -157,7 +1047,7 @@
         </div>
     </div>
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/images/firstSeparatorPicTest.jpg" width="100%"
+        <img class="separator" src="assets/images/firstSeparatorPicTest.webp" width="100%"
             style="border-bottom:1px solid black;" />
     </figure>
 
@@ -174,62 +1064,56 @@
         </div>
         <div id="menu" class="clearfix grid">
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/22522523_2000875133491016_1751623009_o_opt.jpg" alt="img01" />
+                <img src="assets/food/mini/miniribsπαιδακια.webp" alt="img01" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/food/22522523_2000875133491016_1751623009_o.jpg" title="1"
-                            data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/food/ribsπαιδακια.webp" title="1" data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/20048909_1959281904317006_73688924_o_opt.jpg" alt="img02" />
+                <img src="assets/food/mini/miniporkjointκοτσι.webp" alt="img02" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/food/20048909_1959281904317006_73688924_o.jpg" title="2"
-                            data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/food/porkjointκοτσι.webp" title="2" data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/19866353_1956215701290293_399473925_n_opt.jpg" alt="img03" />
+                <img src="assets/food/mini/ministeakχοιρινημπριζολα.webp" alt="img03" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/food/19866353_1956215701290293_399473925_n.jpg" title="3"
-                            data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/food/steakμπιζολαχοιρινη.webp" title="3" data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/19866478_1956215694623627_1321902877_n_opt.jpg" alt="img04" />
+                <img src="assets/food/mini/minikebabκεμπαπγιαουρτλου.webp" alt="img04" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/food/19866478_1956215694623627_1321902877_n.jpg" title="4"
-                            data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/food/kebabκεμπαπγιαουρτλου.webp" title="4" data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/22522303_2000875160157680_87217316_o_opt.jpg" alt="img05" />
+                <img src="assets/food/mini/ministuffδιαφορα.webp" alt="img05" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/food/22522303_2000875160157680_87217316_o.jpg" title="5"
-                            data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/food/stuffδιαφορα.webp" title="5" data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/19866274_1956215747956955_1076878886_n_opt.jpg" alt="img06" />
+                <img src="assets/food/mini/minifishplateψαριαψαρικα.webp" alt="img06" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/food/19866274_1956215747956955_1076878886_n.jpg" title="6"
-                            data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/food/fishPlateψαριαψαρικα.webp" title="6" data-gallery="food">ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
@@ -241,7 +1125,7 @@
         </div>
     </div>
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/images/secondSepPicTest.jpg" width="100%"
+        <img class="separator" src="assets/images/secondSepPicTest.webp" width="100%"
             style="border-bottom:2px solid black;" />
     </figure>
 
@@ -255,58 +1139,58 @@
         </div>
         <div class="clearfix grid">
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshot from 2017-12-10 15-49-17.png" alt="img07" />
+                <img src="assets/outside/Screenshotfrom2017-12-10-15-49-17.webp" alt="img07" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/DSC_5296.jpg" title="7" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/DSC_5296.webp" title="7" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshot from 2017-12-10 17-07-37.png" alt="img08" />
+                <img src="assets/outside/Screenshotfrom2017-12-10-17-07-37.webp" alt="img08" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/19820985_1956565084588688_923229140_o.jpg" title="8"
+                        <a href="assets/images/19820985_1956565084588688_923229140_o.webp" title="8"
                             data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshot from 2017-12-10 17-11-53.png" alt="img09" />
+                <img src="assets/outside/Screenshotfrom2017-12-10-17-11-53.webp" alt="img09" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/19821224_1956565077922022_875277369_o.jpg" title="9"
+                        <a href="assets/images/19821224_1956565077922022_875277369_o.webp" title="9"
                             data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshot from 2017-12-10 16-05-34.png" alt="img10" />
+                <img src="assets/outside/Screenshotfrom2017-12-10-16-05-34.webp" alt="img10" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/DSC_5199.jpg" title="10" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/DSC_5199.webp" title="10" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshot from 2017-12-10 16-09-58.png" alt="img11" />
+                <img src="assets/outside/Screenshotfrom2017-12-10-16-09-58.webp" alt="img11" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/DSC_5174.jpg" title="11" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/DSC_5174.webp" title="11" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshot from 2017-12-10 15-56-01.png" alt="img12" />
+                <img src="assets/outside/Screenshotfrom2017-12-10-15-56-01.webp" alt="img12" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/background.jpg" title="12" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/background.webp" title="12" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>

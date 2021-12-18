@@ -11,32 +11,623 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        .fa-2x {
+            font-size: 2em
+        }
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        .fa-facebook-f:before,
+        .fa-facebook:before {
+            content: "\f09a"
+        }
 
-    <!-- animate.css -->
-    <link rel="stylesheet" href="assets/animate/animate.css" />
-    <link rel="stylesheet" href="assets/animate/set.css" />
+        html {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
 
-    <!-- gallery -->
-    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+        body {
+            margin: 0
+        }
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section,
+        summary {
+            display: block
+        }
 
-    <link rel="stylesheet" href="assets/style.css">
+        a {
+            background: 0 0
+        }
 
-    <style>
+        img {
+            border: 0
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            font: inherit;
+            color: inherit
+        }
+
+        button {
+            overflow: visible
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        html input[type=button],
+        input[type=reset],
+        input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        :before,
+        :after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff
+        }
+
+        input,
+        button,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        a {
+            color: #428bca;
+            text-decoration: none
+        }
+
+        figure {
+            margin: 0
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit
+        }
+
+        h1,
+        .h1,
+        h2,
+        .h2,
+        h3,
+        .h3 {
+            margin-top: 20px;
+            margin-bottom: 10px
+        }
+
+        h2,
+        .h2 {
+            font-size: 30px
+        }
+
+        p {
+            margin: 0 0 10px
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        ul,
+        ol {
+            margin-top: 0;
+            margin-bottom: 10px
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px
+            }
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .col-xs-1,
+        .col-sm-1,
+        .col-md-1,
+        .col-lg-1,
+        .col-xs-2,
+        .col-sm-2,
+        .col-md-2,
+        .col-lg-2,
+        .col-xs-3,
+        .col-sm-3,
+        .col-md-3,
+        .col-lg-3,
+        .col-xs-4,
+        .col-sm-4,
+        .col-md-4,
+        .col-lg-4,
+        .col-xs-5,
+        .col-sm-5,
+        .col-md-5,
+        .col-lg-5,
+        .col-xs-6,
+        .col-sm-6,
+        .col-md-6,
+        .col-lg-6,
+        .col-xs-7,
+        .col-sm-7,
+        .col-md-7,
+        .col-lg-7,
+        .col-xs-8,
+        .col-sm-8,
+        .col-md-8,
+        .col-lg-8,
+        .col-xs-9,
+        .col-sm-9,
+        .col-md-9,
+        .col-lg-9,
+        .col-xs-10,
+        .col-sm-10,
+        .col-md-10,
+        .col-lg-10,
+        .col-xs-11,
+        .col-sm-11,
+        .col-md-11,
+        .col-lg-11,
+        .col-xs-12,
+        .col-sm-12,
+        .col-md-12,
+        .col-lg-12 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        @media (min-width: 768px) {
+
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12 {
+                float: left
+            }
+
+            .col-sm-8 {
+                width: 66.66666667%
+            }
+
+            .col-sm-offset-2 {
+                margin-left: 16.66666667%
+            }
+        }
+
+        .collapse {
+            display: none
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .nav>li {
+            position: relative;
+            display: block
+        }
+
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 10px 15px
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 50px;
+            margin-bottom: 20px;
+            border: 1px solid transparent
+        }
+
+        @media (min-width: 768px) {
+            .navbar {
+                border-radius: 4px
+            }
+        }
+
+        @media (min-width: 768px) {
+            .navbar-header {
+                float: left
+            }
+        }
+
+        .navbar-collapse {
+            padding-right: 15px;
+            padding-left: 15px;
+            overflow-x: visible;
+            -webkit-overflow-scrolling: touch;
+            border-top: 1px solid transparent;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1)
+        }
+
+        @media (min-width: 768px) {
+            .navbar-collapse {
+                width: auto;
+                border-top: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none
+            }
+
+            .navbar-collapse.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0;
+                overflow: visible !important
+            }
+
+            .navbar-fixed-top .navbar-collapse,
+            .navbar-static-top .navbar-collapse,
+            .navbar-fixed-bottom .navbar-collapse {
+                padding-right: 0;
+                padding-left: 0
+            }
+        }
+
+        .navbar-fixed-top .navbar-collapse,
+        .navbar-fixed-bottom .navbar-collapse {
+            max-height: 340px
+        }
+
+        .container>.navbar-header,
+        .container-fluid>.navbar-header,
+        .container>.navbar-collapse,
+        .container-fluid>.navbar-collapse {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        @media (min-width: 768px) {
+
+            .container>.navbar-header,
+            .container-fluid>.navbar-header,
+            .container>.navbar-collapse,
+            .container-fluid>.navbar-collapse {
+                margin-right: 0;
+                margin-left: 0
+            }
+        }
+
+        .navbar-fixed-top,
+        .navbar-fixed-bottom {
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            -webkit-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
+
+        @media (min-width: 768px) {
+
+            .navbar-fixed-top,
+            .navbar-fixed-bottom {
+                border-radius: 0
+            }
+        }
+
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 1px
+        }
+
+        .navbar-brand {
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px
+        }
+
+        @media (min-width: 768px) {
+
+            .navbar>.container .navbar-brand,
+            .navbar>.container-fluid .navbar-brand {
+                margin-left: -15px
+            }
+        }
+
+        .navbar-toggle {
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px
+        }
+
+        @media (min-width: 768px) {
+            .navbar-toggle {
+                display: none
+            }
+        }
+
+        .navbar-nav {
+            margin: 7.5px -15px
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 20px
+        }
+
+        @media (min-width: 768px) {
+            .navbar-nav {
+                float: left;
+                margin: 0
+            }
+
+            .navbar-nav>li {
+                float: left
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 15px;
+                padding-bottom: 15px
+            }
+
+            .navbar-nav.navbar-right:last-child {
+                margin-right: -15px
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            .navbar-right {
+                float: right !important
+            }
+        }
+
+        .navbar-inverse {
+            background-color: #222;
+            border-color: #080808
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:hover,
+        .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff;
+            background-color: #080808
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: #333
+        }
+
+        .navbar-inverse .navbar-collapse,
+        .navbar-inverse .navbar-form {
+            border-color: #101010
+        }
+
+        .clearfix:before,
+        .clearfix:after,
+        .dl-horizontal dd:before,
+        .dl-horizontal dd:after,
+        .container:before,
+        .container:after,
+        .container-fluid:before,
+        .container-fluid:after,
+        .row:before,
+        .row:after,
+        .form-horizontal .form-group:before,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:before,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:before,
+        .btn-group-vertical>.btn-group:after,
+        .nav:before,
+        .nav:after,
+        .navbar:before,
+        .navbar:after,
+        .navbar-header:before,
+        .navbar-header:after,
+        .navbar-collapse:before,
+        .navbar-collapse:after,
+        .pager:before,
+        .pager:after,
+        .panel-body:before,
+        .panel-body:after,
+        .modal-footer:before,
+        .modal-footer:after {
+            display: table;
+            content: " "
+        }
+
+        .clearfix:after,
+        .dl-horizontal dd:after,
+        .container:after,
+        .container-fluid:after,
+        .row:after,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:after,
+        .nav:after,
+        .navbar:after,
+        .navbar-header:after,
+        .navbar-collapse:after,
+        .pager:after,
+        .panel-body:after,
+        .modal-footer:after {
+            clear: both
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        .fadeInLeftBig {
+            -webkit-animation-name: fadeInLeftBig;
+            animation-name: fadeInLeftBig;
+        }
+
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .flipInX {
+            -webkit-backface-visibility: visible !important;
+            -ms-backface-visibility: visible !important;
+            backface-visibility: visible !important;
+            -webkit-animation-name: flipInX;
+            animation-name: flipInX;
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -moz-backface-visibility: hidden
+        }
+
+        .blueimp-gallery {
+            position: fixed;
+            z-index: 999999;
+            overflow: hidden;
+            background: #000;
+            background: rgba(0, 0, 0, .9);
+            opacity: 0;
+            display: none;
+            direction: ltr;
+            -ms-touch-action: none;
+            touch-action: none
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            -webkit-transition: opacity .5s linear;
+            -moz-transition: opacity .5s linear;
+            -ms-transition: opacity .5s linear;
+            -o-transition: opacity .5s linear;
+            transition: opacity .5s linear
+        }
         #myBtn {
             display: none;
             position: fixed;
@@ -49,10 +640,44 @@
         }
     </style>
 
+    <!-- font awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+
+    <!-- bootstrap -->
+    <link rel="preload" href="assets/bootstrap/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- animate.css -->
+    <link rel="preload" href="assets/animate/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/animate/animate.css">
+    </noscript>
+    <link rel="stylesheet" href="assets/animate/set.css" />
+
+    <!-- gallery -->
+    <link rel="preload" href="assets/gallery/blueimp-gallery.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+    </noscript>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.png"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.webp"></button>
     <div class="topbar animated fadeInLeftBig"></div>
     <!-- Header Starts -->
     <div class="navbar-wrapper">
@@ -61,7 +686,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <!-- Logo Starts -->
-                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.png" alt="logo"></a>
+                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.webp" alt="logo"></a>
                         <!-- #Logo Ends -->
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target=".navbar-collapse">
@@ -92,146 +717,146 @@
 
             <div class="clearfix grid">
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/backgroundFinal.jpg" alt="img13" />
+                    <img src="assets/images/outside-thumb/backgroundFinal.webp" alt="img13" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/backgroundFinal.jpg" title="13" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/backgroundFinal.webp" title="13" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5276.JPG" alt="img14" />
+                    <img src="assets/images/outside-thumb/DSC_5276.webp" alt="img14" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5276.jpg" title="14" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5276.webp" title="14" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5278.JPG" alt="img15" />
+                    <img src="assets/images/outside-thumb/DSC_5278.webp" alt="img15" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5278.jpg" title="15" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5278.webp" title="15" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5279.JPG" alt="img16" />
+                    <img src="assets/images/outside-thumb/DSC_5279.webp" alt="img16" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5279.jpg" title="16" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5279.webp" title="16" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5282.JPG" alt="img17" />
+                    <img src="assets/images/outside-thumb/DSC_5282.webp" alt="img17" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5282.jpg" title="17" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5282.webp" title="17" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5290.JPG" alt="img18" />
+                    <img src="assets/images/outside-thumb/DSC_5290.webp" alt="img18" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5290.jpg" title="18" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5290.webp" title="18" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5296.JPG" alt="img19" />
+                    <img src="assets/images/outside-thumb/DSC_5296.webp" alt="img19" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5296.jpg" title="19" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5296.webp" title="19" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5303.JPG" alt="img20" />
+                    <img src="assets/images/outside-thumb/DSC_5303.webp" alt="img20" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5303.jpg" title="20" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5303.webp" title="20" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5311.JPG" alt="img21" />
+                    <img src="assets/images/outside-thumb/DSC_5311.webp" alt="img21" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5311.jpg" title="21" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5311.webp" title="21" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSCN3928.JPG" alt="img22" />
+                    <img src="assets/images/outside-thumb/DSCN3928.webp" alt="img22" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSCN3928.jpg" title="22" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSCN3928.webp" title="22" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSCN3920.JPG" alt="img23" />
+                    <img src="assets/images/outside-thumb/DSCN3920.webp" alt="img23" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSCN3920.jpg" title="23" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSCN3920.webp" title="23" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSCN3921.JPG" alt="img24" />
+                    <img src="assets/images/outside-thumb/DSCN3921.webp" alt="img24" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSCN3921.jpg" title="24" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSCN3921.webp" title="24" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSCN3922.JPG" alt="img25" />
+                    <img src="assets/images/outside-thumb/DSCN3922.webp" alt="img25" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSCN3922.jpg" title="25" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSCN3922.webp" title="25" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSCN3924.JPG" alt="img26" />
+                    <img src="assets/images/outside-thumb/DSCN3924.webp" alt="img26" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSCN3924.jpg" title="26" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSCN3924.webp" title="26" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSCN3926.JPG" alt="img27" />
+                    <img src="assets/images/outside-thumb/DSCN3926.webp" alt="img27" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSCN3926.jpg" title="27" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSCN3926.webp" title="27" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/DSC_5314.JPG" alt="img28" />
+                    <img src="assets/images/outside-thumb/DSC_5314.webp" alt="img28" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5314.jpg" title="28" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5314.webp" title="28" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
@@ -262,51 +887,51 @@
         <div class="row position-relative margin-0">
             <div class="clearfix grid">
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/19820985_1956565084588688_923229140_o.jpg" alt="img29" />
+                    <img src="assets/images/outside-thumb/19820985_1956565084588688_923229140_o.webp" alt="img29" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/19820985_1956565084588688_923229140_o.jpg" title="29"
+                            <a href="assets/images/19820985_1956565084588688_923229140_o.webp" title="29"
                                 data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/19904509_1956215667956963_1656787122_n.jpg" alt="img30" />
+                    <img src="assets/images/outside-thumb/19904509_1956215667956963_1656787122_n.webp" alt="img30" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/19904509_1956215667956963_1656787122_n.jpg" title="30"
+                            <a href="assets/images/19904509_1956215667956963_1656787122_n.webp" title="30"
                                 data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/19964949_1956215621290301_318985364_n.jpg" alt="img31" />
+                    <img src="assets/images/outside-thumb/19964949_1956215621290301_318985364_n.webp" alt="img31" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/19964949_1956215621290301_318985364_n.jpg" title="31"
+                            <a href="assets/images/19964949_1956215621290301_318985364_n.webp" title="31"
                                 data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/19821224_1956565077922022_875277369_o.jpg" alt="img32" />
+                    <img src="assets/images/outside-thumb/19821224_1956565077922022_875277369_o.webp" alt="img32" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/19821224_1956565077922022_875277369_o.jpg" title="32"
+                            <a href="assets/images/19821224_1956565077922022_875277369_o.webp" title="32"
                                 data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/outside-thumb/19866355_1956215641290299_1828339705_n.jpg" alt="img33" />
+                    <img src="assets/images/outside-thumb/19866355_1956215641290299_1828339705_n.webp" alt="img33" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/19866355_1956215641290299_1828339705_n.jpg" title="33"
+                            <a href="assets/images/19866355_1956215641290299_1828339705_n.webp" title="33"
                                 data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
@@ -319,12 +944,13 @@
             <div class="wowload fadeInUp">
                 <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">
                     <i>Ο εσωτερικός χώρος συνεχίζει να διατηρεί και να αναβιώνει μία λαϊκή ζεστασιά, με φόντο τα δρύινα
-                        βαρέλια, αλλά και καλλιτεχνικές αναζητήσεις (των ιδίων εμών) καθώς και δωρέες, όπως η προσωπογραφία
+                        βαρέλια, αλλά και καλλιτεχνικές αναζητήσεις (των ιδίων εμών) καθώς και δωρέες, όπως η
+                        προσωπογραφία
                         του Ευγένιου Σπαθάρη.
                     </i>
                 </p>
                 <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">
-                    <i>Συνολικά η χωρητικότητα φτάνει στα 220 άτομα. 
+                    <i>Συνολικά η χωρητικότητα φτάνει στα 220 άτομα.
                     </i>
                 </p>
             </div>
@@ -335,146 +961,146 @@
 
             <div class="clearfix grid">
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5178.JPG" alt="img34" />
+                    <img src="assets/images/inside-thumb/DSC_5178.webp" alt="img34" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5178.jpg" title="34" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5178.webp" title="34" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5181.JPG" alt="img35" />
+                    <img src="assets/images/inside-thumb/DSC_5181.webp" alt="img35" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5181.jpg" title="35" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5181.webp" title="35" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/background.JPG" alt="img36" />
+                    <img src="assets/images/inside-thumb/backgroundβαρελια.webp" alt="img36" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/background.jpg" title="36" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/background.webp" title="36" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5194.JPG" alt="img37" />
+                    <img src="assets/images/inside-thumb/DSC_5194.webp" alt="img37" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5194.jpg" title="37" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5194.webp" title="37" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5196.JPG" alt="img38" />
+                    <img src="assets/images/inside-thumb/DSC_5196.webp" alt="img38" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5196.jpg" title="38" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5196.webp" title="38" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5195.JPG" alt="img39" />
+                    <img src="assets/images/inside-thumb/DSC_5195.webp" alt="img39" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5195.jpg" title="39" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5195.webp" title="39" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5220.JPG" alt="img40" />
+                    <img src="assets/images/inside-thumb/DSC_5220.webp" alt="img40" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5220.jpg" title="40" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5220.webp" title="40" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5233.JPG" alt="img41" />
+                    <img src="assets/images/inside-thumb/DSC_5233.webp" alt="img41" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5233.jpg" title="41" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5233.webp" title="41" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5251.JPG" alt="img42" />
+                    <img src="assets/images/inside-thumb/DSC_5251.webp" alt="img42" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5251.jpg" title="42" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5251.webp" title="42" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5186.JPG" alt="img43" />
+                    <img src="assets/images/inside-thumb/DSC_5186.webp" alt="img43" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5186.jpg" title="43" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5186.webp" title="43" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5252.JPG" alt="img44" />
+                    <img src="assets/images/inside-thumb/DSC_5252.webp" alt="img44" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5252.jpg" title="44" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5252.webp" title="44" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5253.JPG" alt="img45" />
+                    <img src="assets/images/inside-thumb/DSC_5253.webp" alt="img45" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5253.jpg" title="45" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5253.webp" title="45" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5266.JPG" alt="img46" />
+                    <img src="assets/images/inside-thumb/DSC_5266.webp" alt="img46" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5266.jpg" title="46" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5266.webp" title="46" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5322.JPG" alt="img47" />
+                    <img src="assets/images/inside-thumb/DSC_5322.webp" alt="img47" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5322.jpg" title="47" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5322.webp" title="47" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5234.JPG" alt="img48" />
+                    <img src="assets/images/inside-thumb/DSC_5234.webp" alt="img48" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5234.jpg" title="48" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5234.webp" title="48" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>
                 <figure class="effect-oscar wowload fadeInUp">
-                    <img src="assets/images/inside-thumb/DSC_5207.JPG" alt="img49" />
+                    <img src="assets/images/inside-thumb/DSC_5207.webp" alt="img49" />
                     <figcaption>
                         <h2></h2>
                         <p><br>
-                            <a href="assets/images/DSC_5207.jpg" title="49" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                            <a href="assets/images/DSC_5207.webp" title="49" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                         </p>
                     </figcaption>
                 </figure>

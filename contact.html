@@ -11,32 +11,534 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        .fa-2x {
+            font-size: 2em
+        }
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        .fa-facebook-f:before,
+        .fa-facebook:before {
+            content: "\f09a"
+        }
 
-    <!-- animate.css -->
-    <link rel="stylesheet" href="assets/animate/animate.css" />
-    <link rel="stylesheet" href="assets/animate/set.css" />
+        html {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
 
-    <!-- gallery -->
-    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+        body {
+            margin: 0
+        }
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        a {
+            background: 0 0
+        }
 
-    <link rel="stylesheet" href="assets/style.css">
+        img {
+            border: 0
+        }
 
-    <style>
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            font: inherit;
+            color: inherit
+        }
+
+        button {
+            overflow: visible
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        html input[type=button],
+        input[type=reset],
+        input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        td,
+        th {
+            padding: 0
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        :before,
+        :after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff
+        }
+
+        input,
+        button,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        a {
+            color: #428bca;
+            text-decoration: none
+        }
+
+        a:hover,
+        a:focus {
+            color: #2a6496;
+            text-decoration: underline
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0
+        }
+
+        p {
+            margin: 0 0 10px
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        ul,
+        ol {
+            margin-top: 0;
+            margin-bottom: 10px
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px
+            }
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        table {
+            background-color: transparent
+        }
+
+        .collapse {
+            display: none
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .nav>li {
+            position: relative;
+            display: block
+        }
+
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 10px 15px
+        }
+
+        .nav>li>a:hover,
+        .nav>li>a:focus {
+            text-decoration: none;
+            background-color: #eee
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 50px;
+            margin-bottom: 20px;
+            border: 1px solid transparent
+        }
+
+        @media (min-width: 768px) {
+            .navbar {
+                border-radius: 4px
+            }
+        }
+
+        @media (min-width: 768px) {
+            .navbar-header {
+                float: left
+            }
+        }
+
+        .navbar-collapse {
+            padding-right: 15px;
+            padding-left: 15px;
+            overflow-x: visible;
+            -webkit-overflow-scrolling: touch;
+            border-top: 1px solid transparent;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1)
+        }
+
+        @media (min-width: 768px) {
+            .navbar-collapse {
+                width: auto;
+                border-top: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none
+            }
+
+            .navbar-collapse.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0;
+                overflow: visible !important
+            }
+
+            .navbar-fixed-top .navbar-collapse,
+            .navbar-static-top .navbar-collapse,
+            .navbar-fixed-bottom .navbar-collapse {
+                padding-right: 0;
+                padding-left: 0
+            }
+        }
+
+        .navbar-fixed-top .navbar-collapse,
+        .navbar-fixed-bottom .navbar-collapse {
+            max-height: 340px
+        }
+
+        .container>.navbar-header,
+        .container-fluid>.navbar-header,
+        .container>.navbar-collapse,
+        .container-fluid>.navbar-collapse {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        @media (min-width: 768px) {
+
+            .container>.navbar-header,
+            .container-fluid>.navbar-header,
+            .container>.navbar-collapse,
+            .container-fluid>.navbar-collapse {
+                margin-right: 0;
+                margin-left: 0
+            }
+        }
+
+        .navbar-fixed-top,
+        .navbar-fixed-bottom {
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            -webkit-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
+
+        @media (min-width: 768px) {
+
+            .navbar-fixed-top,
+            .navbar-fixed-bottom {
+                border-radius: 0
+            }
+        }
+
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 1px
+        }
+
+        .navbar-brand {
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px
+        }
+
+        @media (min-width: 768px) {
+
+            .navbar>.container .navbar-brand,
+            .navbar>.container-fluid .navbar-brand {
+                margin-left: -15px
+            }
+        }
+
+        .navbar-toggle {
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px
+        }
+
+        .navbar-toggle .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px
+        }
+
+        .navbar-toggle .icon-bar+.icon-bar {
+            margin-top: 4px
+        }
+
+        @media (min-width: 768px) {
+            .navbar-toggle {
+                display: none
+            }
+        }
+
+        .navbar-nav {
+            margin: 7.5px -15px
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 20px
+        }
+
+        @media (min-width: 768px) {
+            .navbar-nav {
+                float: left;
+                margin: 0
+            }
+
+            .navbar-nav>li {
+                float: left
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 15px;
+                padding-bottom: 15px
+            }
+
+            .navbar-nav.navbar-right:last-child {
+                margin-right: -15px
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            .navbar-right {
+                float: right !important
+            }
+        }
+
+        .navbar-inverse {
+            background-color: #222;
+            border-color: #080808
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:hover,
+        .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff;
+            background-color: #080808
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: #333
+        }
+
+        .navbar-inverse .navbar-toggle .icon-bar {
+            background-color: #fff
+        }
+
+        .navbar-inverse .navbar-collapse,
+        .navbar-inverse .navbar-form {
+            border-color: #101010
+        }
+
+        .clearfix:before,
+        .clearfix:after,
+        .dl-horizontal dd:before,
+        .dl-horizontal dd:after,
+        .container:before,
+        .container:after,
+        .container-fluid:before,
+        .container-fluid:after,
+        .row:before,
+        .row:after,
+        .form-horizontal .form-group:before,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:before,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:before,
+        .btn-group-vertical>.btn-group:after,
+        .nav:before,
+        .nav:after,
+        .navbar:before,
+        .navbar:after,
+        .navbar-header:before,
+        .navbar-header:after,
+        .navbar-collapse:before,
+        .navbar-collapse:after,
+        .pager:before,
+        .pager:after,
+        .panel-body:before,
+        .panel-body:after,
+        .modal-footer:before,
+        .modal-footer:after {
+            display: table;
+            content: " "
+        }
+
+        .clearfix:after,
+        .dl-horizontal dd:after,
+        .container:after,
+        .container-fluid:after,
+        .row:after,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:after,
+        .nav:after,
+        .navbar:after,
+        .navbar-header:after,
+        .navbar-collapse:after,
+        .pager:after,
+        .panel-body:after,
+        .modal-footer:after {
+            clear: both
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        .fadeInLeftBig {
+            -webkit-animation-name: fadeInLeftBig;
+            animation-name: fadeInLeftBig;
+        }
+
+        .flipInX {
+            -webkit-backface-visibility: visible !important;
+            -ms-backface-visibility: visible !important;
+            backface-visibility: visible !important;
+            -webkit-animation-name: flipInX;
+            animation-name: flipInX;
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -moz-backface-visibility: hidden
+        }
+
+        .blueimp-gallery {
+            position: fixed;
+            z-index: 999999;
+            overflow: hidden;
+            background: #000;
+            background: rgba(0, 0, 0, .9);
+            opacity: 0;
+            display: none;
+            direction: ltr;
+            -ms-touch-action: none;
+            touch-action: none
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            -webkit-transition: opacity .5s linear;
+            -moz-transition: opacity .5s linear;
+            -ms-transition: opacity .5s linear;
+            -o-transition: opacity .5s linear;
+            transition: opacity .5s linear
+        }
         #myBtn {
             display: none;
             position: fixed;
@@ -49,10 +551,44 @@
         }
     </style>
 
+    <!-- font awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+
+    <!-- bootstrap -->
+    <link rel="preload" href="assets/bootstrap/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- animate.css -->
+    <link rel="preload" href="assets/animate/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/animate/animate.css">
+    </noscript>
+    <link rel="stylesheet" href="assets/animate/set.css" />
+
+    <!-- gallery -->
+    <link rel="preload" href="assets/gallery/blueimp-gallery.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+    </noscript>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.png"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.webp"></button>
     <div class="topbar animated fadeInLeftBig"></div>
     <!-- Header Starts -->
     <div class="navbar-wrapper">
@@ -61,7 +597,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <!-- Logo Starts -->
-                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.png" alt="logo"></a>
+                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.webp" alt="logo"></a>
                         <!-- #Logo Ends -->
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target=".navbar-collapse">

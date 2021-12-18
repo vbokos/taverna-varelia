@@ -12,32 +12,640 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        .fa-2x {
+            font-size: 2em
+        }
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        .fa-facebook-f:before,
+        .fa-facebook:before {
+            content: "\f09a"
+        }
 
-    <!-- animate.css -->
-    <link rel="stylesheet" href="assets/animate/animate.css" />
-    <link rel="stylesheet" href="assets/animate/set.css" />
+        html {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
 
-    <!-- gallery -->
-    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+        body {
+            margin: 0
+        }
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section,
+        summary {
+            display: block
+        }
 
-    <link rel="stylesheet" href="assets/style.css">
+        a {
+            background: 0 0
+        }
 
-    <style>
+        img {
+            border: 0
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            font: inherit;
+            color: inherit
+        }
+
+        button {
+            overflow: visible
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        html input[type=button],
+        input[type=reset],
+        input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        td,
+        th {
+            padding: 0
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        :before,
+        :after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff
+        }
+
+        input,
+        button,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        a {
+            color: #428bca;
+            text-decoration: none
+        }
+
+        figure {
+            margin: 0
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit
+        }
+
+        h1,
+        .h1,
+        h2,
+        .h2,
+        h3,
+        .h3 {
+            margin-top: 20px;
+            margin-bottom: 10px
+        }
+
+        h2,
+        .h2 {
+            font-size: 30px
+        }
+
+        p {
+            margin: 0 0 10px
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        ul,
+        ol {
+            margin-top: 0;
+            margin-bottom: 10px
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        @media (min-width:768px) {
+            .container {
+                width: 750px
+            }
+        }
+
+        @media (min-width:992px) {
+            .container {
+                width: 970px
+            }
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .col-xs-1,
+        .col-sm-1,
+        .col-md-1,
+        .col-lg-1,
+        .col-xs-2,
+        .col-sm-2,
+        .col-md-2,
+        .col-lg-2,
+        .col-xs-3,
+        .col-sm-3,
+        .col-md-3,
+        .col-lg-3,
+        .col-xs-4,
+        .col-sm-4,
+        .col-md-4,
+        .col-lg-4,
+        .col-xs-5,
+        .col-sm-5,
+        .col-md-5,
+        .col-lg-5,
+        .col-xs-6,
+        .col-sm-6,
+        .col-md-6,
+        .col-lg-6,
+        .col-xs-7,
+        .col-sm-7,
+        .col-md-7,
+        .col-lg-7,
+        .col-xs-8,
+        .col-sm-8,
+        .col-md-8,
+        .col-lg-8,
+        .col-xs-9,
+        .col-sm-9,
+        .col-md-9,
+        .col-lg-9,
+        .col-xs-10,
+        .col-sm-10,
+        .col-md-10,
+        .col-lg-10,
+        .col-xs-11,
+        .col-sm-11,
+        .col-md-11,
+        .col-lg-11,
+        .col-xs-12,
+        .col-sm-12,
+        .col-md-12,
+        .col-lg-12 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        @media (min-width:768px) {
+
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12 {
+                float: left
+            }
+
+            .col-sm-8 {
+                width: 66.66666667%
+            }
+
+            .col-sm-offset-2 {
+                margin-left: 16.66666667%
+            }
+        }
+
+        table {
+            background-color: transparent
+        }
+
+        .collapse {
+            display: none
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .nav>li {
+            position: relative;
+            display: block
+        }
+
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 10px 15px
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 50px;
+            margin-bottom: 20px;
+            border: 1px solid transparent
+        }
+
+        @media (min-width:768px) {
+            .navbar {
+                border-radius: 4px
+            }
+        }
+
+        @media (min-width:768px) {
+            .navbar-header {
+                float: left
+            }
+        }
+
+        .navbar-collapse {
+            padding-right: 15px;
+            padding-left: 15px;
+            overflow-x: visible;
+            -webkit-overflow-scrolling: touch;
+            border-top: 1px solid transparent;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1)
+        }
+
+        @media (min-width:768px) {
+            .navbar-collapse {
+                width: auto;
+                border-top: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none
+            }
+
+            .navbar-collapse.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0;
+                overflow: visible !important
+            }
+
+            .navbar-fixed-top .navbar-collapse,
+            .navbar-static-top .navbar-collapse,
+            .navbar-fixed-bottom .navbar-collapse {
+                padding-right: 0;
+                padding-left: 0
+            }
+        }
+
+        .navbar-fixed-top .navbar-collapse,
+        .navbar-fixed-bottom .navbar-collapse {
+            max-height: 340px
+        }
+
+        .container>.navbar-header,
+        .container-fluid>.navbar-header,
+        .container>.navbar-collapse,
+        .container-fluid>.navbar-collapse {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        @media (min-width: 768px) {
+
+            .container>.navbar-header,
+            .container-fluid>.navbar-header,
+            .container>.navbar-collapse,
+            .container-fluid>.navbar-collapse {
+                margin-right: 0;
+                margin-left: 0
+            }
+        }
+
+        .navbar-fixed-top,
+        .navbar-fixed-bottom {
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            -webkit-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
+
+        @media (min-width:768px) {
+
+            .navbar-fixed-top,
+            .navbar-fixed-bottom {
+                border-radius: 0
+            }
+        }
+
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 1px
+        }
+
+        .navbar-brand {
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px
+        }
+
+        @media (min-width:768px) {
+
+            .navbar>.container .navbar-brand,
+            .navbar>.container-fluid .navbar-brand {
+                margin-left: -15px
+            }
+        }
+
+        .navbar-toggle {
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px
+        }
+
+        @media (min-width: 768px) {
+            .navbar-toggle {
+                display: none
+            }
+        }
+
+        .navbar-nav {
+            margin: 7.5px -15px
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 20px
+        }
+
+        @media (min-width: 768px) {
+            .navbar-nav {
+                float: left;
+                margin: 0
+            }
+
+            .navbar-nav>li {
+                float: left
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 15px;
+                padding-bottom: 15px
+            }
+
+            .navbar-nav.navbar-right:last-child {
+                margin-right: -15px
+            }
+        }
+
+        @media (min-width: 768px) {
+            .navbar-left {
+                float: left !important
+            }
+
+            .navbar-right {
+                float: right !important
+            }
+        }
+
+        .navbar-inverse {
+            background-color: #222;
+            border-color: #080808
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #777
+        }
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:hover,
+        .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff;
+            background-color: #080808
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: #333
+        }
+
+        .navbar-inverse .navbar-collapse,
+        .navbar-inverse .navbar-form {
+            border-color: #101010
+        }
+
+        .clearfix:before,
+        .clearfix:after,
+        .dl-horizontal dd:before,
+        .dl-horizontal dd:after,
+        .container:before,
+        .container:after,
+        .container-fluid:before,
+        .container-fluid:after,
+        .row:before,
+        .row:after,
+        .form-horizontal .form-group:before,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:before,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:before,
+        .btn-group-vertical>.btn-group:after,
+        .nav:before,
+        .nav:after,
+        .navbar:before,
+        .navbar:after,
+        .navbar-header:before,
+        .navbar-header:after,
+        .navbar-collapse:before,
+        .navbar-collapse:after,
+        .pager:before,
+        .pager:after,
+        .panel-body:before,
+        .panel-body:after,
+        .modal-footer:before,
+        .modal-footer:after {
+            display: table;
+            content: " "
+        }
+
+        .clearfix:after,
+        .dl-horizontal dd:after,
+        .container:after,
+        .container-fluid:after,
+        .row:after,
+        .form-horizontal .form-group:after,
+        .btn-toolbar:after,
+        .btn-group-vertical>.btn-group:after,
+        .nav:after,
+        .navbar:after,
+        .navbar-header:after,
+        .navbar-collapse:after,
+        .pager:after,
+        .panel-body:after,
+        .modal-footer:after {
+            clear: both
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        .fadeInLeftBig {
+            -webkit-animation-name: fadeInLeftBig;
+            animation-name: fadeInLeftBig;
+        }
+
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .flipInX {
+            -webkit-backface-visibility: visible !important;
+            -ms-backface-visibility: visible !important;
+            backface-visibility: visible !important;
+            -webkit-animation-name: flipInX;
+            animation-name: flipInX;
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -moz-backface-visibility: hidden
+        }
+
+        .blueimp-gallery {
+            position: fixed;
+            z-index: 999999;
+            overflow: hidden;
+            background: #000;
+            background: rgba(0, 0, 0, .9);
+            opacity: 0;
+            display: none;
+            direction: ltr;
+            -ms-touch-action: none;
+            touch-action: none
+        }
+
+        .blueimp-gallery,
+        .blueimp-gallery>.slides>.slide>.slide-content {
+            -webkit-transition: opacity .5s linear;
+            -moz-transition: opacity .5s linear;
+            -ms-transition: opacity .5s linear;
+            -o-transition: opacity .5s linear;
+            transition: opacity .5s linear
+        }
         #myBtn {
             display: none;
             position: fixed;
@@ -50,10 +658,44 @@
         }
     </style>
 
+    <!-- font awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+
+    <!-- bootstrap -->
+    <link rel="preload" href="assets/bootstrap/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- animate.css -->
+    <link rel="preload" href="assets/animate/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/animate/animate.css">
+    </noscript>
+    <link rel="stylesheet" href="assets/animate/set.css" />
+
+    <!-- gallery -->
+    <link rel="preload" href="assets/gallery/blueimp-gallery.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+    </noscript>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.png"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/thumb.gototop.webp"></button>
 
     <div class="topbar animated fadeInLeftBig"></div>
 
@@ -64,7 +706,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <!-- Logo Starts -->
-                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.png" alt="logo"></a>
+                        <a class="navbar-brand" href="/"><img src="images/logo-varelia.webp" alt="logo"></a>
                         <!-- #Logo Ends -->
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target=".navbar-collapse">
@@ -94,7 +736,7 @@
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <div class="wowload fadeInUp">
-                    <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;"><i>Σε εμάς θα
+                    <p class="wowload fadeInLeft" style="margin:10px; font-size:16px; text-align:center;"><i>Σε εμάς θα
                             βρείτε μία μεγάλη συλλογή μαγειρευτών φαγητών, στη σχάρα αλλά και στη λαδόκολλα, συνοδευμένα
                             με εκλεκτούς μεζέδες κάθε αρεσκείας, δροσερές σαλάτες και συνοδευτικό ποτό, για τους
                             μεγάλους αλλά και μικρούς φίλους μας.</i></p>
@@ -105,7 +747,7 @@
 
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Ορεκτικά</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Ορεκτικά</u></i></h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Άρτος ανά άτομο 0,70€<br>Πίτα ψητή
                 0,50€<br>Φέτα ΠΟΠ Λάρισας 3,00€<br>Γραβιέρα Αμφιλοχίας 4,00€<br>Τυροκαυτερή 3,50€<br>Τζατζίκι
                 3,00€<br>Σκορδαλιά 3,00€<br>Μελιτζανοσαλάτα καπνιστή 3,50€<br>Πατάτες φρέσκες τηγανιτές
@@ -113,7 +755,7 @@
                 φύλλο κρούστας, σουσάμι & μέλι 5,00€<br>Τυροκροκέτες 4,80€<br>Πιπεριές καυτερές 4,00€<br>Φέτα ψητή (με
                 ντομάτα-πιπεριά) 4,00€<br>Κολοκυθοκεφτέδες 5,00€<br>Μανιτάρια πλευρώτους στη σχάρα 6,00€<br>Τηγανόψωμο
                 με φέτα 5,00€</p>
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Σαλάτες</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Σαλάτες</u></i></h2>
             <p class="wowload fadeInLeft" style="margin:10; font-size:16px; text-align:center;">Χωριάτικη
                 6,00€<br>(ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, φέτα, κάππαρη, ελιές)</p>
             <p class="wowload fadeInLeft" style=" margin:10;font-size:16px; text-align:center;">Αγγουροντομάτα
@@ -134,14 +776,15 @@
     </div>
 
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/images/Screenshot from 2017-08-13 18-51-18.jpg" width="100%"
+        <img class="separator" src="assets/images/Screenshotfrom2017-08-13-18-51-18.jpg" width="100%"
             style="border-bottom:1px solid black;" />
     </figure>
 
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
             <br />
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Της ώρας στα κάρβουνα</i>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Της ώρας στα
+                        κάρβουνα</u></i>
             </h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Χοιρινά φιλετάκια λαιμού
                 μερίδα/κιλό 8,50€/24,00€<br>Χοιρινή μπριζόλα 8,00€<br>Χοιρινή μπριζόλα καπνιστή 9,00€<br>Ψαρονέφρι
@@ -154,25 +797,27 @@
             <p class="wowload fadeInLeft" style="margin:8; font-size:16px; text-align:center;">Ποικιλία κρεατικών 4
                 ατόμων 30,00€</p>
 
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Στη σούβλα</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Στη σούβλα</u></i>
+            </h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Κοντοσούβλι κοτόπουλο μερίδα
                 8,00€<br>Κοντοσούβλι χοιρινό μερίδα 8,50€<br>Κοκορέτσι μερίδα 8,50€</p>
         </div>
     </div>
 
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/food/19866353_1956215701290293_399473925_n.jpg" width="100%"
+        <img class="separator" src="assets/food/steakμπιζολαχοιρινη.webp" width="100%"
             style="border-bottom:1px solid black;" />
     </figure>
 
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
             <br />
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Μεζέδες</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Μεζέδες</u></i></h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Τηγανιά χοιρινή 7,50€<br>Κοτόπουλο
                 τηγανιά με μουστάρδα 8,00€<br>Χωριάτικο λουκάνικο 7,50€<br>Κεφτεδάκια με σως γιαουρτιού 8,00€</p>
 
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Θαλασσινά</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Θαλασσινά</u></i>
+            </h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center;">Βακαλάος τηγανιτός
                 8,00€<br>Καλαμαράκια τηγανιτά 8,00€<br>Γαύρος μαρινάτος 4,00€<br>Σαρδέλα ψητή 7,00€<br>Χταπόδι ξιδάτο
                 10,00€<br>Γαύρος τηγανιτός 6,00€</p>
@@ -180,30 +825,32 @@
     </div>
 
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/images/Screenshot from 2017-08-13 19-25-20.jpg" width="100%"
+        <img class="separator" src="assets/images/Screenshotfrom2017-08-13-19-25-20.jpg" width="100%"
             style="border-bottom:1px solid black;" />
     </figure>
 
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
             <br />
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Οίνος</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Οίνος</u></i></h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Λευκός ξηρός
                 3,00€/500ml<br>Ροζέ ξηρός 3,00€/500ml<br>Ερυθρός ξηρός 3,50€/500ml<br>Ερυθρός ημίγλυκος 3,50€/500ml</p>
 
             <br /><br />
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Τσίπουρο - Ούζο</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Τσίπουρο -
+                        Ούζο</u></i></h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Τσίπουρο Τυρνάβου
                 Δεκαράκι/200ml 7,00€<br>Τσίπουρο Γάτσιου/200ml 7,00€<br>Τσίπουρο Αποστολάκη/200ml 8,00€<br>Ούζο (Μίνι
                 Μυτιλήνης/Πλωμαρίου)/200ml 7,00€</p>
 
             <br /><br />
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Μπύρες</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Μπύρες</u></i></h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Άλφα 3,00€<br>Heineken
                 3,00€<br>Μάμος 3,00€<br>Fix/Fix άνευ 3,00€<br>Amstel 3,00€<br>Kaiser 3,20€</p>
 
             <br /><br />
-            <h2 class="text-center wowload fadeInUp" style="margin:20; text-align:center;"><i>Αναψυκτικά</i></h2>
+            <h2 class="text-center wowload fadeInUp" style="margin:20px; text-align:center;"><i><u>Αναψυκτικά</u></i>
+            </h2>
             <p class="wowload fadeInLeft" style="font-size:16px; text-align:center; margin:0;">Coca-Cola
                 (απλή/light/zero) 1,50€<br>Sprite 1,50€<br>Σόδα 1,50€<br>Πορτοκαλάδα 1,50€<br>Νερό(1.5lt) 1,00€</p>
         </div>
