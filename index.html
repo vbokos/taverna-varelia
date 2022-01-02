@@ -923,6 +923,18 @@
             outline: none;
             cursor: pointer;
         }
+
+        .mapouter {
+            position: relative;
+            text-align: center;
+            height: auto;
+            width: 100%;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+        }
     </style>
 
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" as="style"
@@ -966,6 +978,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="assets/style.css">
+
+    <script src="lazysizes.min.js" async></script>
 </head>
 
 <body>
@@ -1132,7 +1146,7 @@
         </div>
     </div>
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/images/secondSepPicTest.webp" width="100%"
+        <img class="lazyload" data-src="assets/images/secondSepPicTest.webp" width="100%"
             style="border-bottom:2px solid black;" />
     </figure>
 
@@ -1146,7 +1160,7 @@
         </div>
         <div class="clearfix grid">
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshotfrom2017-12-10-15-49-17.webp" alt="img07" class="img-responsive" />
+                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-15-49-17.webp" alt="img07" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1155,7 +1169,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshotfrom2017-12-10-17-07-37.webp" alt="img08" class="img-responsive" />
+                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-17-07-37.webp" alt="img08" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1165,7 +1179,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshotfrom2017-12-10-17-11-53.webp" alt="img09" class="img-responsive" />
+                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-17-11-53.webp" alt="img09" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1175,7 +1189,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshotfrom2017-12-10-16-05-34.webp" alt="img10" class="img-responsive" />
+                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-16-05-34.webp" alt="img10" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1184,7 +1198,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshotfrom2017-12-10-16-09-58.webp" alt="img11" class="img-responsive" />
+                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-16-09-58.webp" alt="img11" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1193,7 +1207,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/outside/Screenshotfrom2017-12-10-15-56-01.webp" alt="img12" class="img-responsive" />
+                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-15-56-01.webp" alt="img12" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1209,10 +1223,12 @@
         </div>
     </div>
 
-    <div id="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.7438210534706!2d23.81144724202226!3d38.053055127085166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1992aff77e81b%3A0x77f8b06add8aed46!2zzqbOtc65zrTOr86_z4UgMywgzpzOsc-Bzr_Pjc-DzrkgMTUxIDI2!5e0!3m2!1sel!2sgr!4v1514045668970"
-            title="Google Maps" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="mapouter">
+        <div id="map" class="gmap_canvas"><iframe id="map"
+                src="https://maps.google.com/maps?q=Fidiou%203,%20Marousi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Google Maps Address" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"></iframe><br>
+        </div>
     </div>
     <!--Contact Ends-->
 
@@ -1225,8 +1241,20 @@
                     title="Facebook Likebox" scrolling="no" frameborder="0" style="border:none; overflow:hidden;"
                     allowTransparency="true"></iframe>
             </p>
-            <p class="wowload fadeInLeft" style="font-size:16px;">Τηλ. 210 805 0344</p>
+            <!--
+            <p class="wowload flipInX">
+                <u>Ωράριο Λειτουργίας</u>:<br />
+                Δευτέρα: κλειστά<br />
+                Τρίτη: 13:00-00:00<br />
+                Τετάρτη: 13:00-00:00<br />
+                Πέμπτη: 13:00-00:00<br />
+                Παρασκευή: 13:00-00:00<br />
+                Σάββατο: 12:30-00:00<br />
+                Κυριακή: 12:30-00:00
+            </p>
+            -->
         </div>
+        <p class="wowload fadeInLeft" style="font-size:16px;">Τηλ. 210 805 0344</p>
         <i>@Τα Βαρέλια - Ταβέρνα - Μεζεδοπωλείο.</i>
     </div>
     <!-- # Footer Ends -->
@@ -1258,8 +1286,6 @@
 
     <!-- gallery -->
     <script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
-
-    <!-- script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script -->
 
     <!-- custom script -->
     <script src="assets/script.js"></script>
