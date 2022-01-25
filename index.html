@@ -943,6 +943,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap">
     </noscript>
 
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" as="font"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap">
+    </noscript>
+
     <!-- font awesome -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         as="style" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"
@@ -1022,7 +1028,12 @@
     <div id="home">
         <!-- Slider Starts -->
         <div class="banner">
-            <img src="assets/images/backgroundFinal.webp" alt="banner" class="img-responsive">
+            <div class="background">
+                <img src="assets/images/backgroundFinal.webp"
+                    srcset="assets/images/Screenshotfrom2017-12-10-15-56-01.webp.webp 375w, assets/images/backgroundFinal810.webp 810w, assets/images/backgroundFinal1164.webp 1164w, assets/images/backgroundFinal.webp 2048w"
+                    sizes="(max-width: 375px) 100vw, (max-width: 810px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                    alt="banner">
+            </div>
             <div class="caption">
                 <div class="caption-wrapper">
                     <div class="caption-info">
@@ -1043,7 +1054,7 @@
         <h2 class="text-center wowload fadeInUp" style="text-align:center;"><i>Ανακαλύψτε την ιστορία μας</i></h2>
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center">
-                <p class="text-center  wowload fadeInLeft" style="font-size:16px; text-align:center;"><i>Η ιστορία μας
+                <p class="text-center wowload fadeInLeft" style="font-size:16px; text-align:center;"><i>Η ιστορία μας
                         ξεκίνησε στην οδό Ομήρου στο Χαλάνδρι το 1977, όταν οι αδερφοί Ανδρέου άνοιξαν την πρώτη τους
                         οικογενειακή ταβέρνα με την ονομασία «Τα Βαρέλια». Σύντομα η ταβέρνα ξεχώρισε χάρη στο φαγητό
                         της και την ρετσίνα που σερβιριζόταν απ’ ευθείας από τα μεγάλα δρύινα βαρέλια, τα οποία δέσποζαν
@@ -1051,11 +1062,11 @@
                         δεκαετία, τα Βαρέλια είχαν γίνει ένα κοσμοπολίτικο στέκι, το οποίο προτιμούσαν πολλοί, μεταξύ
                         των οποίων και μεγάλοι καλλιτέχνες, όπως οι Θάνος Λειβαδίτης, Διονύσης Παπαγιαννόπουλος,
                         Δημήτρης Παπαμιχαήλ και άλλοι.</i></p>
-                <p class="text-center  wowload fadeInLeft" style="font-size:16px; text-align:center;"><i>Το 1986, η
+                <p class="text-center wowload fadeInLeft" style="font-size:16px; text-align:center;"><i>Το 1986, η
                         επιχείρηση μεταφέρεται στο Μαρούσι, στην οδό Φειδίου, ακριβώς απέναντι από την πλατεία των
                         Αλωνίων, όπου βρίσκεται μέχρι σήμερα, συνεχίζοντας να φιλοξενεί όσους αναζητούν βραδιές με καλό
                         κρασί, νόστιμο φαγητό και φυσικά καλή παρέα…</i></p>
-                <p class="text-center  wowload fadeInLeft" style="font-size: 16px; text-align:center;"><i>Σε εμάς θα
+                <p class="text-center wowload fadeInLeft" style="font-size: 16px; text-align:center;"><i>Σε εμάς θα
                         βρείτε ένα ζεστό και φιλικό περιβάλλον, εξαιρετικά φαγητά και μεζέδες στις πιο λογικές τιμές και
                         φυσικά εκλεκτό κρασί και τσίπουρο. Αναλαμβάνουμε συνεστιάσεις και εκδηλώσεις (γάμους, βαπτίσεις,
                         παιδικά πάρτι κλπ). Διαθέτουμε σάλα με τζάκι και θέρμανση χωρητικότητας 120 ατόμων, καθώς και
@@ -1068,7 +1079,7 @@
         </div>
     </div>
     <figure class="wowload fadeInUp">
-        <img class="separator" src="assets/images/firstSeparatorPicTest.webp" width="100%"
+        <img class="separator" src="assets/images/firstSeparatorPicTest.webp" alt="" width="100%"
             style="border-bottom:1px solid black;" />
     </figure>
 
@@ -1085,7 +1096,7 @@
         </div>
         <div id="menu" class="clearfix grid">
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/miniribsπαιδακια.webp" alt="img01" class="img-responsive" />
+                <img src="assets/food/mini/miniribsπαιδακια.webp" alt="img01" class="img-thumbnail" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1094,7 +1105,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/miniporkjointκοτσι.webp" alt="img02" class="img-responsive" />
+                <img src="assets/food/mini/miniporkjointκοτσι.webp" alt="img02" class="img-thumbnail" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1103,7 +1114,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/ministeakχοιρινημπριζολα.webp" alt="img03" class="img-responsive" />
+                <img src="assets/food/mini/ministeakχοιρινημπριζολα.webp" alt="img03" class="img-thumbnail" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1112,7 +1123,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/minikebabκεμπαπγιαουρτλου.webp" alt="img04" class="img-responsive" />
+                <img src="assets/food/mini/minikebabκεμπαπγιαουρτλου.webp" alt="img04" class="img-thumbnail" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1121,7 +1132,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/ministuffδιαφορα.webp" alt="img05" class="img-responsive" />
+                <img src="assets/food/mini/ministuffδιαφορα.webp" alt="img05" class="img-thumbnail" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1130,7 +1141,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/minifishplateψαριαψαρικα.webp" alt="img06" class="img-responsive" />
+                <img src="assets/food/mini/minifishplateψαριαψαρικα.webp" alt="img06" class="img-thumbnail" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1146,7 +1157,7 @@
         </div>
     </div>
     <figure class="wowload fadeInUp">
-        <img class="lazyload" data-src="assets/images/secondSepPicTest.webp" width="100%"
+        <img class="lazyload" data-src="assets/images/secondSepPicTest.webp" alt="" width="100%"
             style="border-bottom:2px solid black;" />
     </figure>
 
@@ -1160,58 +1171,58 @@
         </div>
         <div class="clearfix grid">
             <figure class="effect-oscar wowload fadeInUp">
-                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-15-49-17.webp" alt="img07" />
+                <img class="img-thumbnail" src="assets/outside/Screenshotfrom2017-12-10-15-56-01.webp" alt="img07" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/DSC_5296.webp" title="7" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/background.webp" title="7" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-17-07-37.webp" alt="img08" />
+                <img class="img-thumbnail" src="assets/outside/Screenshotfrom2017-12-10-15-49-17.webp" alt="img08" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/19820985_1956565084588688_923229140_o.webp" title="8"
+                        <a href="assets/images/DSC_5296.webp" title="8" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                    </p>
+                </figcaption>
+            </figure>
+            <figure class="effect-oscar wowload fadeInUp">
+                <img class="img-thumbnail" src="assets/outside/Screenshotfrom2017-12-10-17-07-37.webp" alt="img09" />
+                <figcaption>
+                    <h2></h2>
+                    <p><br>
+                        <a href="assets/images/19820985_1956565084588688_923229140_o.webp" title="9"
                             data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-17-11-53.webp" alt="img09" />
+                <img class="img-thumbnail" src="assets/outside/Screenshotfrom2017-12-10-17-11-53.webp" alt="img10" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/19821224_1956565077922022_875277369_o.webp" title="9"
+                        <a href="assets/images/19821224_1956565077922022_875277369_o.webp" title="10"
                             data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-16-05-34.webp" alt="img10" />
+                <img class="img-thumbnail" src="assets/outside/Screenshotfrom2017-12-10-16-05-34.webp" alt="img11" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/DSC_5199.webp" title="10" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/DSC_5199.webp" title="11" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-16-09-58.webp" alt="img11" />
+                <img class="img-thumbnail" src="assets/outside/Screenshotfrom2017-12-10-16-09-58.webp" alt="img12" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
-                        <a href="assets/images/DSC_5174.webp" title="11" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
-                    </p>
-                </figcaption>
-            </figure>
-            <figure class="effect-oscar wowload fadeInUp">
-                <img class="lazyload" data-src="assets/outside/Screenshotfrom2017-12-10-15-56-01.webp" alt="img12" />
-                <figcaption>
-                    <h2></h2>
-                    <p><br>
-                        <a href="assets/images/background.webp" title="12" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
+                        <a href="assets/images/DSC_5174.webp" title="12" data-gallery>ΜΕΓΕΘΥΝΣΗ</a>
                     </p>
                 </figcaption>
             </figure>
@@ -1225,7 +1236,7 @@
 
     <div class="mapouter">
         <div id="map" class="gmap_canvas"><iframe id="map"
-                src="https://maps.google.com/maps?q=Fidiou%203,%20Marousi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Fidiou%203,%20Marousi&t=&z=15&ie=UTF8&iwloc=&output=embed" defer
                 title="Google Maps Address" frameborder="0" scrolling="no" marginheight="0"
                 marginwidth="0"></iframe><br>
         </div>
