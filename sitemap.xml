@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.taverna-varelia.gr/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
       <image:image>
@@ -46,6 +46,30 @@
         <image:title>img06</image:title>
       </image:image>
       <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/outside/Screenshotfrom2017-12-10-15-56-01.webp</image:loc>
+        <image:title>img07</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/outside/Screenshotfrom2017-12-10-15-49-17.webp</image:loc>
+        <image:title>img08</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/outside/Screenshotfrom2017-12-10-17-07-37.webp</image:loc>
+        <image:title>img09</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/outside/Screenshotfrom2017-12-10-17-11-53.webp</image:loc>
+        <image:title>img10</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/outside/Screenshotfrom2017-12-10-16-05-34.webp</image:loc>
+        <image:title>img11</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/outside/Screenshotfrom2017-12-10-16-09-58.webp</image:loc>
+        <image:title>img12</image:title>
+      </image:image>
+      <image:image>
         <image:loc>https://www.taverna-varelia.gr/assets/food/ribs%CF%80%CE%B1%CE%B9%CE%B4%CE%B1%CE%BA%CE%B9%CE%B1.webp</image:loc>
         <image:title>ΜΕΓΕΘΥΝΣΗ</image:title>
       </image:image>
@@ -70,6 +94,10 @@
         <image:title>ΜΕΓΕΘΥΝΣΗ</image:title>
       </image:image>
       <image:image>
+        <image:loc>https://www.taverna-varelia.gr/assets/images/background.webp</image:loc>
+        <image:title>ΜΕΓΕΘΥΝΣΗ</image:title>
+      </image:image>
+      <image:image>
         <image:loc>https://www.taverna-varelia.gr/assets/images/DSC_5296.webp</image:loc>
         <image:title>ΜΕΓΕΘΥΝΣΗ</image:title>
       </image:image>
@@ -89,14 +117,10 @@
         <image:loc>https://www.taverna-varelia.gr/assets/images/DSC_5174.webp</image:loc>
         <image:title>ΜΕΓΕΘΥΝΣΗ</image:title>
       </image:image>
-      <image:image>
-        <image:loc>https://www.taverna-varelia.gr/assets/images/background.webp</image:loc>
-        <image:title>ΜΕΓΕΘΥΝΣΗ</image:title>
-      </image:image>
   </url>
   <url>
     <loc>https://www.taverna-varelia.gr/gallery.html</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -398,7 +422,7 @@
   </url>
   <url>
     <loc>https://www.taverna-varelia.gr/contact.html</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -408,7 +432,7 @@
   </url>
   <url>
     <loc>https://www.taverna-varelia.gr/menu.html</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
       <image:image>
