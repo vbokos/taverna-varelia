@@ -109,7 +109,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	}
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 	body{font:300 13px/13px Roboto,Arial,Helvetica;}
 	.navbar-brand{padding-top: 11px;}
 	.services ul li{margin:0 0.5em; }
@@ -124,7 +124,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 		margin: 0 25px 25px 0;}
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
 	h1{font: 700 3.5em Roboto,Arial,Helvetica;}
 	h4 {font: 300 1.3em Roboto,Arial,Helvetica;}
 	.btn{padding: 1em 2em;}
@@ -143,7 +143,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	}
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 	body{font:300 12px/12px Roboto,Arial,Helvetica;}
 	.navbar-nav > li > a {line-height: 1em;}	
 	.navbar-brand{padding: 7px;}
