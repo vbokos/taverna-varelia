@@ -17,7 +17,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.3",
-        "ratingCount": "218"
+        "ratingCount": "224"
       }
     }
     </script>
@@ -937,7 +937,7 @@
         }
     </style>
 
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" as="style"
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap">
@@ -946,7 +946,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         as="style" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -980,8 +980,6 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="assets/style.css">
-
-    <script src="lazysizes.min.js" async></script>
 </head>
 
 <body>
@@ -1092,7 +1090,7 @@
         </div>
         <div id="menu" class="clearfix grid">
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/miniribsπαιδακια.webp" alt="img01" class="img-thumbnail" />
+                <img src="assets/food/mini/miniribsπαιδακια.webp" alt="img01" class="img-thumbnail" loading="lazy" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1101,7 +1099,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/miniporkjointκοτσι.webp" alt="img02" class="img-thumbnail" />
+                <img src="assets/food/mini/miniporkjointκοτσι.webp" alt="img02" class="img-thumbnail" loading="lazy" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1110,7 +1108,8 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/ministeakχοιρινημπριζολα.webp" alt="img03" class="img-thumbnail" />
+                <img src="assets/food/mini/ministeakχοιρινημπριζολα.webp" alt="img03" class="img-thumbnail"
+                    loading="lazy" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1119,7 +1118,8 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/minikebabκεμπαπγιαουρτλου.webp" alt="img04" class="img-thumbnail" />
+                <img src="assets/food/mini/minikebabκεμπαπγιαουρτλου.webp" alt="img04" class="img-thumbnail"
+                    loading="lazy" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1128,7 +1128,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/ministuffδιαφορα.webp" alt="img05" class="img-thumbnail lazyload" />
+                <img src="assets/food/mini/ministuffδιαφορα.webp" alt="img05" class="img-thumbnail" loading="lazy" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1137,7 +1137,8 @@
                 </figcaption>
             </figure>
             <figure class="effect-oscar wowload fadeInUp">
-                <img src="assets/food/mini/minifishplateψαριαψαρικα.webp" alt="img06" class="img-thumbnail lazyload" />
+                <img src="assets/food/mini/minifishplateψαριαψαρικα.webp" alt="img06" class="img-thumbnail"
+                    loading="lazy" />
                 <figcaption>
                     <h2></h2>
                     <p><br>
@@ -1273,9 +1274,6 @@
             <img class="lazyload" data-src="images/espaBanner.webp" alt="espaBanner" width="100%"
                 style="border-bottom:2px solid black;" />
         </figure>
-        <!--<p>
-            <img class="lazyload" data-src="images/espaBanner.webp" alt="espaBanner" />
-        </p>-->
     </div>
     <!-- # Footer Ends -->
 
@@ -1329,6 +1327,8 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+
+    <script src="lazysizes.min.js" async></script>
 
 </body>
 
