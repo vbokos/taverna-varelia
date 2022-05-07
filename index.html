@@ -17,7 +17,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.3",
-        "ratingCount": "227"
+        "ratingCount": "231"
       }
     }
     </script>
@@ -56,14 +56,6 @@
         .fa-facebook-f:before,
         .fa-facebook:before {
             content: "\f09a"
-        }
-
-        .fa-cutlery:before {
-            content: "\f0f5"
-        }
-
-        .fa-angle-down:before {
-            content: "\f107"
         }
 
         html {
@@ -935,9 +927,15 @@
             overflow: hidden;
             background: none !important;
         }
+
     </style>
 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css?family=Josefin+Sans:600">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:600">
+    </noscript>
 
     <!-- font awesome -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -974,6 +972,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="assets/style.css">
+
+    <script src="lazysizes.min.js" async></script>
 </head>
 
 <body>
@@ -1320,8 +1320,6 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-
-    <script src="lazysizes.min.js" async></script>
 
 </body>
 
