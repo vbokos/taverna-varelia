@@ -28,4 +28,3 @@ $('.carousel').swipe({
     },
     allowPageScroll: 'vertical'
 });
-
